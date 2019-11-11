@@ -38,6 +38,10 @@
           <option name="url" value="https://amolbodhare@bitbucket.org/rohit_digiinterface/filmindia.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://amolbodhare@bitbucket.org/android_digiinterface/odisha_janmorcha.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\Amit\Desktop" />
