@@ -8,7 +8,38 @@
     tools:context=".activities.WalkThroughActivity">
 
    <androidx.viewpager.widget.ViewPager
+       android:id="@+id/slideViewPager"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/walkPrevBtn"
+            android:text="Prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/walkNextBtn"
+            android:text="Next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+
+
+    </LinearLayout>
 
 </RelativeLayout>
