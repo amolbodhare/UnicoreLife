@@ -8,14 +8,17 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Context;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.life.unicore.R;
 
@@ -25,22 +28,31 @@ public class WalkThroughActivity extends AppCompatActivity {
     private LinearLayout mDotLayout;
     private  SliderAdapter sliderAdapter;
     private  TextView[] mDots;
+    private  int mDotsLength;
     int mCurrentPage;
-    Button walkPreBtn;
-    Button walkNextBtn;
+    ImageView walkPreBtn;
+    ImageView walkNextBtn;
+    Button getStartdBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_walk_through);
-        walkPreBtn=(Button)findViewById(R.id.walkPrevBtn);
-        walkNextBtn=(Button)findViewById(R.id.walkNextBtn);
+
+
+        walkPreBtn=(ImageView)findViewById(R.id.walkPrevBtn);
+        walkNextBtn=(ImageView)findViewById(R.id.walkNextBtn);
+        getStartdBtn=(Button)findViewById(R.id.getStartedBtn);
         mSlideViewPager=findViewById(R.id.slideViewPager);
         mDotLayout=findViewById(R.id.dotsLayout);
+
 
         sliderAdapter=new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
 
         addDotsIndicator(0);
+        getStartdBtn.setVisibility(View.GONE);
+        walkPreBtn.setVisibility(View.INVISIBLE);
 
         mSlideViewPager.addOnPageChangeListener(viewListener);
 
@@ -61,7 +73,7 @@ public class WalkThroughActivity extends AppCompatActivity {
 
     public void addDotsIndicator(int position)
     {
-        mDots=new TextView[7];
+    /*    mDots=new TextView[7];
         mDotLayout.removeAllViews();
         for(int i=0;i<mDots.length;i++)
         {
@@ -74,7 +86,23 @@ public class WalkThroughActivity extends AppCompatActivity {
         if(mDots.length>0)
         {
             mDots[position].setTextColor(getResources().getColor(R.color.walktitle));
+        }*/
+
+        mDotsLength=mDotLayout.getChildCount();
+
+
+        for(int i=0;i<mDotLayout.getChildCount();i++)
+        {
+            ((View)mDotLayout.getChildAt(i)).setBackground(getResources().getDrawable(R.drawable.deactivated_walk_dot_back));
+
         }
+
+            if(position==mDotsLength)
+            {
+
+            }
+            else
+            ((View)mDotLayout.getChildAt(position)).setBackground(getResources().getDrawable(R.drawable.activated_walk_dot));
 
     }
 
@@ -89,25 +117,33 @@ public class WalkThroughActivity extends AppCompatActivity {
 
             addDotsIndicator(position);
             mCurrentPage=position;
+
             if(position==0)
             {
                 walkNextBtn.setEnabled(true);
                 walkPreBtn.setEnabled(false);
+                mDotLayout.setVisibility(View.VISIBLE);
                 walkPreBtn.setVisibility(View.INVISIBLE);
+                getStartdBtn.setVisibility(View.GONE);
 
-                walkNextBtn.setText("Next");
-                walkPreBtn.setText("");
+                //walkNextBtn.setText("Next");
+                //walkPreBtn.setText("");
 
             }
-            else if(position==mDots.length-1)
+            else if(position==mDotsLength)
             {
 
-                walkNextBtn.setEnabled(true);
-                walkPreBtn.setEnabled(true);
-                walkPreBtn.setVisibility(View.VISIBLE);
+                walkPreBtn.setVisibility(View.GONE);
+                walkNextBtn.setVisibility(View.GONE);
+                mDotLayout.setVisibility(View.GONE);
+                getStartdBtn.setVisibility(View.VISIBLE);
 
-                walkNextBtn.setText("Finish");
-                walkPreBtn.setText("Back");
+                //walkNextBtn.setEnabled(true);
+                //walkPreBtn.setEnabled(true);
+
+
+                //walkNextBtn.setText("Finish");
+                //walkPreBtn.setText("Back");
 
             }
             else
@@ -115,9 +151,12 @@ public class WalkThroughActivity extends AppCompatActivity {
                 walkNextBtn.setEnabled(true);
                 walkPreBtn.setEnabled(true);
                 walkPreBtn.setVisibility(View.VISIBLE);
+                mDotLayout.setVisibility(View.VISIBLE);
+                walkNextBtn.setVisibility(View.VISIBLE);
+                getStartdBtn.setVisibility(View.GONE);
 
-                walkNextBtn.setText("Next");
-                walkPreBtn.setText("Back");
+                //walkNextBtn.setText("Next");
+                //walkPreBtn.setText("Back");
 
             }
         }

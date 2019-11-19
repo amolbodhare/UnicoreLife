@@ -11,35 +11,102 @@
        android:id="@+id/slideViewPager"
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="50dp"
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content">
-        <Button
+
+        <ImageView
             android:id="@+id/walkPrevBtn"
             android:text="Prev"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Button>
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btnbackoval"
+            android:tint="@color/greyborder"
+            android:src="@drawable/ic_walk_left_white_24dp">
+        </ImageView>
 
     <LinearLayout
         android:id="@+id/dotsLayout"
         android:orientation="horizontal"
-        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:weightSum="6"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="60"
+        android:layout_width="0dp"
         android:layout_height="wrap_content">
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/walktitle"
+            android:layout_height="6dp">
+        </View>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:background="@color/walktitle"
+            android:layout_height="6dp">
+        </View>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:background="@color/walktitle"
+            android:layout_height="6dp">
+        </View>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:background="@color/walktitle"
+            android:layout_height="6dp">
+        </View>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:background="@color/walktitle"
+            android:layout_height="6dp">
+        </View>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="2dp"
+            android:background="@color/walktitle"
+            android:layout_height="6dp">
+        </View>
 
     </LinearLayout>
 
-        <Button
+
+        <ImageView
             android:id="@+id/walkNextBtn"
             android:text="Next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Button>
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btnbackoval"
+            android:backgroundTint="@color/walktitle"
+            android:rotation="180"
+            android:src="@drawable/ic_walk_left_white_24dp">
 
+        </ImageView>
 
+        <Button
+            android:id="@+id/getStartedBtn"
+            android:text="GET STARTED"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:background="@drawable/btnbackblue"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </RelativeLayout>
