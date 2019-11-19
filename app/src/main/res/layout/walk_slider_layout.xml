@@ -10,18 +10,18 @@
 
     <RelativeLayout
         android:id="@+id/top_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="275dp"
+        android:layout_height="275dp"
         android:background="@drawable/eclipsewalk"
         android:layout_centerInParent="true">
 
-    <ImageView
-        android:id="@+id/walk_imv"
-        android:src="@drawable/doctorswalk"
-        android:scaleType="fitCenter"
-        android:layout_centerVertical="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/walk_imv"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/doctorswalk" />
 
         <TextView
             android:id="@+id/walk_title"

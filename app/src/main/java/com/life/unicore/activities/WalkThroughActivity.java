@@ -36,10 +36,14 @@ public class WalkThroughActivity extends AppCompatActivity {
         walkNextBtn=(Button)findViewById(R.id.walkNextBtn);
         mSlideViewPager=findViewById(R.id.slideViewPager);
         mDotLayout=findViewById(R.id.dotsLayout);
+
         sliderAdapter=new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
+
         addDotsIndicator(0);
+
         mSlideViewPager.addOnPageChangeListener(viewListener);
+
         walkNextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +61,7 @@ public class WalkThroughActivity extends AppCompatActivity {
 
     public void addDotsIndicator(int position)
     {
-        mDots=new TextView[6];
+        mDots=new TextView[7];
         mDotLayout.removeAllViews();
         for(int i=0;i<mDots.length;i++)
         {
@@ -87,10 +91,33 @@ public class WalkThroughActivity extends AppCompatActivity {
             mCurrentPage=position;
             if(position==0)
             {
+                walkNextBtn.setEnabled(true);
+                walkPreBtn.setEnabled(false);
+                walkPreBtn.setVisibility(View.INVISIBLE);
+
+                walkNextBtn.setText("Next");
+                walkPreBtn.setText("");
+
+            }
+            else if(position==mDots.length-1)
+            {
+
+                walkNextBtn.setEnabled(true);
+                walkPreBtn.setEnabled(true);
+                walkPreBtn.setVisibility(View.VISIBLE);
+
+                walkNextBtn.setText("Finish");
+                walkPreBtn.setText("Back");
 
             }
             else
             {
+                walkNextBtn.setEnabled(true);
+                walkPreBtn.setEnabled(true);
+                walkPreBtn.setVisibility(View.VISIBLE);
+
+                walkNextBtn.setText("Next");
+                walkPreBtn.setText("Back");
 
             }
         }
@@ -119,7 +146,9 @@ public class WalkThroughActivity extends AppCompatActivity {
                     R.drawable.ambulancewalk,R.drawable.bloodbankwalk,R.drawable.fitnesswalk,
                     R.drawable.pharmacywalk
         };
-        public  String[] slider_headings={"FIND DOCTORS","FIND HOSPITALS","DIGESTIVE CENTRE","AMBULANCE","BLOOD BANK","FIRNESS CENTRE","PHARMACY"};
+
+        public  String[] slider_headings={"FIND DOCTORS","FIND HOSPITALS","DIGESTIVE CENTRE","AMBULANCE","BLOOD BANK","FITNESS CENTRE","PHARMACY"};
+
         public  String[] slider_desc=
                 {
                         "One way to announce or promote a certain new products or special.One way to announce or promote a certain new products or special.",
