@@ -22,7 +22,8 @@ import android.widget.Toast;
 
 import com.life.unicore.R;
 
-public class WalkThroughActivity extends AppCompatActivity {
+public class WalkThroughActivity extends AppCompatActivity
+{
 
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
@@ -33,19 +34,26 @@ public class WalkThroughActivity extends AppCompatActivity {
     ImageView walkPreBtn;
     ImageView walkNextBtn;
     Button getStartdBtn;
+    ImageView backBtnImv;
+    TextView skipBtnTv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().getDecorView().setSystemUiVisibility(0);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorAccent));
+
         setContentView(R.layout.activity_walk_through);
 
+
+        backBtnImv=(ImageView)findViewById(R.id.backBtn);
+        skipBtnTv=(TextView)findViewById(R.id.skipTextView);
 
         walkPreBtn=(ImageView)findViewById(R.id.walkPrevBtn);
         walkNextBtn=(ImageView)findViewById(R.id.walkNextBtn);
         getStartdBtn=(Button)findViewById(R.id.getStartedBtn);
         mSlideViewPager=findViewById(R.id.slideViewPager);
         mDotLayout=findViewById(R.id.dotsLayout);
-
 
         sliderAdapter=new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
@@ -167,6 +175,8 @@ public class WalkThroughActivity extends AppCompatActivity {
         }
     };
 
+
+
     public  class SliderAdapter extends PagerAdapter
     {
         Context context;
@@ -234,4 +244,5 @@ public class WalkThroughActivity extends AppCompatActivity {
             container.removeView((RelativeLayout)object);
         }
     }
+
 }

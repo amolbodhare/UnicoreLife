@@ -10,6 +10,9 @@
 
     <color name="walktitle">#0069AB</color>
     <color name="walkdesc">#A2A2A2</color>
+    <color name="walkskip">#717171</color>
+    <color name="transparent">#00000000</color>
+
 
 
 
