@@ -1,26 +1,27 @@
 package com.life.unicore.activities;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+        import androidx.annotation.NonNull;
+        import androidx.appcompat.app.AppCompatActivity;
+        import androidx.viewpager.widget.PagerAdapter;
+        import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
-import android.os.Bundle;
-import android.text.Html;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+        import android.content.Context;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.text.Html;
+        import android.util.Log;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.view.WindowManager;
+        import android.widget.Button;
+        import android.widget.ImageView;
+        import android.widget.LinearLayout;
+        import android.widget.RelativeLayout;
+        import android.widget.TextView;
+        import android.widget.Toast;
 
-import com.life.unicore.R;
+        import com.life.unicore.R;
 
 public class WalkThroughActivity extends AppCompatActivity
 {
@@ -34,24 +35,20 @@ public class WalkThroughActivity extends AppCompatActivity
     ImageView walkPreBtn;
     ImageView walkNextBtn;
     Button getStartdBtn;
-    ImageView backBtnImv;
-    TextView skipBtnTv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().getDecorView().setSystemUiVisibility(0);
+        //getWindow().getDecorView().setSystemUiVisibility(0);
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorAccent));
 
         setContentView(R.layout.activity_walk_through);
 
-
-        backBtnImv=(ImageView)findViewById(R.id.backBtn);
-        skipBtnTv=(TextView)findViewById(R.id.skipTextView);
-
         walkPreBtn=(ImageView)findViewById(R.id.walkPrevBtn);
         walkNextBtn=(ImageView)findViewById(R.id.walkNextBtn);
         getStartdBtn=(Button)findViewById(R.id.getStartedBtn);
+
         mSlideViewPager=findViewById(R.id.slideViewPager);
         mDotLayout=findViewById(R.id.dotsLayout);
 
@@ -70,6 +67,7 @@ public class WalkThroughActivity extends AppCompatActivity
                 mSlideViewPager.setCurrentItem(mCurrentPage+1);
             }
         });
+
         walkPreBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,11 +103,11 @@ public class WalkThroughActivity extends AppCompatActivity
 
         }
 
-            if(position==mDotsLength)
-            {
+        if(position==mDotsLength)
+        {
 
-            }
-            else
+        }
+        else
             ((View)mDotLayout.getChildAt(position)).setBackground(getResources().getDrawable(R.drawable.activated_walk_dot));
 
     }
@@ -175,6 +173,20 @@ public class WalkThroughActivity extends AppCompatActivity
         }
     };
 
+    public void onBackClick(View view) {
+        //Toast.makeText(WalkThroughActivity.this, "Back", Toast.LENGTH_SHORT).show();
+        mSlideViewPager.setCurrentItem(mCurrentPage-1);
+    }
+
+    public void onSkipClick(View view) {
+        onGetStartedClick(findViewById(R.id.getStartedBtn));
+    }
+
+    public void onGetStartedClick(View view) {
+        Intent i=new Intent(WalkThroughActivity.this,ChooseLocationActivity.class);
+        startActivity(i);
+        //Toast.makeText(WalkThroughActivity.this, "getting started", Toast.LENGTH_SHORT).show();
+    }
 
 
     public  class SliderAdapter extends PagerAdapter
@@ -190,11 +202,11 @@ public class WalkThroughActivity extends AppCompatActivity
         }
 
         public  int[] slider_images=
-        {
-            R.drawable.doctorswalk,R.drawable.hospitalswalk,R.drawable.diagwalk,
-                    R.drawable.ambulancewalk,R.drawable.bloodbankwalk,R.drawable.fitnesswalk,
-                    R.drawable.pharmacywalk
-        };
+                {
+                        R.drawable.doctorswalk,R.drawable.hospitalswalk,R.drawable.diagwalk,
+                        R.drawable.ambulancewalk,R.drawable.bloodbankwalk,R.drawable.fitnesswalk,
+                        R.drawable.pharmacywalk
+                };
 
         public  String[] slider_headings={"FIND DOCTORS","FIND HOSPITALS","DIGESTIVE CENTRE","AMBULANCE","BLOOD BANK","FITNESS CENTRE","PHARMACY"};
 

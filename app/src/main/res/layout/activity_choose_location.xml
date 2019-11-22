@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_back"
+    tools:context=".activities.ChooseLocationActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFFFFFF" />
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:clickable="true"
+            android:layout_width="60dp"
+            android:padding="21dp"
+            android:onClick="onBackClick"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:onClick="onSkipClick"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:text="Skip"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/walkskip"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/locLogoImv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/loc_icon" />
+    <TextView
+        android:id="@+id/welcomeTitle"
+        android:layout_below="@id/locLogoImv"
+        android:text="Hello,nice to\nmeet you !"
+        android:textColor="@color/walktitle"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="30sp"
+        android:fontFamily="@font/lato_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/locDesc"
+        android:layout_below="@id/welcomeTitle"
+        android:text="Set your location to start  find
+    doctors, hospitals,etc. around you"
+        android:textColor="@color/textgrey"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/lato_regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/currentLocBtn"
+        android:layout_below="@id/locDesc"
+        android:text="USE CURRENT LOCATION"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/btnbackblue"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/orTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentLocBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="or"
+        android:textColor="@color/textgrey"
+        android:textSize="18sp" />
+    <Button
+        android:id="@+id/manualLocBtn"
+        android:layout_below="@id/orTv"
+        android:text="SET YOUR LOCATION MANUALLY"
+        android:textColor="@color/textgrey"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/btnbackwhite"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>
