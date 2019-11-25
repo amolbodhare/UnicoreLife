@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hallListCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/clickable_trans_bg"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/eclipsewalk"
+            android:layout_centerInParent="true">
+
+        </RelativeLayout>
+            <ImageView
+                android:id="@+id/navImv"
+                android:layout_centerHorizontal="true"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/diagwalk" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/navTitle"
+            android:layout_below="@id/imageLayout"
+            android:text="Find Doctors"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/lato_regular"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/navDesc"
+            android:layout_below="@id/navTitle"
+            android:text="Book Appointments"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/lato_regular"
+            android:singleLine="true"
+            android:textSize="9sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
