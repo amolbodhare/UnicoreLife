@@ -41,7 +41,7 @@ public class WalkThroughActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         //getWindow().getDecorView().setSystemUiVisibility(0);
-        getWindow().setStatusBarColor(getResources().getColor(R.color.colorAccent));
+        getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
 
         setContentView(R.layout.activity_walk_through);
 

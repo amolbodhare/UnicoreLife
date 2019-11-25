@@ -12,7 +12,13 @@
     <color name="walkdesc">#A2A2A2</color>
     <color name="walkskip">#717171</color>
     <color name="transparent">#00000000</color>
+    <color name="semi_transparent">#29000000</color>
     <color name="textgrey">#8D8D8D</color>
+    <color name="textprofilecolor">#00E15A</color>
+    <color name="navigationTitlecolor">#4B4B4B</color>
+    <color name="fragmentbacke">#F2F8FC</color>
+
+
 
 
 
