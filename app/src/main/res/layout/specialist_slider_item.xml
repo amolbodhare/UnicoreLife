@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/specialistCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/clickable_trans_bg"
+        android:padding="10dp">
+    <RelativeLayout
+        android:id="@+id/specialistImgLayout"
+        android:gravity="center_horizontal"
+        android:layout_width="100dp"
+        android:layout_height="80dp">
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/specialistImg"
+    android:layout_width="65dp"
+    android:layout_height="65dp"
+    android:background="@drawable/eclipsewalk"
+    android:layout_centerVertical="true"
+    android:src="@drawable/hospitalswalk"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/specialistTitle"
+        android:text="dfnfdn"
+        android:layout_below="@id/specialistImgLayout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="13sp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
