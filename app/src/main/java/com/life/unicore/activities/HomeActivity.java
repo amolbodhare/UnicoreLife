@@ -37,7 +37,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         context=HomeActivity.this;
         drawerLayout = findViewById(R.id.drawerlayout);
-        ((ExpandableHeightGridView) findViewById(R.id.homeNavGridView)).setAdapter(new HallsGridViewAdapter());
+        ((ExpandableHeightGridView) findViewById(R.id.homeNavGridView)).setAdapter(new HomeNavGridViewAdapter());
         ((ExpandableHeightGridView) findViewById(R.id.homeNavGridView)).setExpanded(true);
         specialistSliderList();
         hospitalsSliderList();
@@ -52,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
         drawerLayout.openDrawer(GravityCompat.START);
     }
 
-    class HallsGridViewAdapter extends BaseAdapter {
+    class HomeNavGridViewAdapter extends BaseAdapter {
 
         private TextView textView_navTitle;
         private TextView textView_navDesc;

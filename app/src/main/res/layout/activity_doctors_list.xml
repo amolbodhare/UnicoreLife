@@ -5,11 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.FindDoctorsActivity">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
+    android:background="@color/fragmentbacke"
+    tools:context=".activities.DoctorsListActivity">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -88,46 +86,21 @@
                 android:layout_below="@id/searchviewLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
                 android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="16dp"
-                    android:text="Search by health concern"
-                    android:fontFamily="@font/lato_regular"
-                    android:textSize="12sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
 
-                <com.life.unicore.others.ExpandableHeightGridView
-                    android:id="@+id/healthConcernGridView"
-                    android:layout_marginTop="15dp"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/doctorsListRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:horizontalSpacing="20dp"
-                    android:verticalSpacing="3dp"
-                    android:numColumns="2"
-                    android:scrollbars="none" />
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/relativeLayout"/>
 
-                <Button
-                    android:id="@+id/searchMoreBtn"
-                    android:clickable="true"
-                    android:text="LOOKING FOR MORE ? SEARCH"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/lato_regular"
-                    android:textColor="@color/white"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_width="match_parent"
-                    android:background="@drawable/btnbackblue"
-                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
         </RelativeLayout>
-
-    </ScrollView>
 
 
 </RelativeLayout>

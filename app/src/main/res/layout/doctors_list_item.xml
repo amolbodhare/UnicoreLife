@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RelativeLayout
+
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/doctorImg"
+                android:layout_width="70dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:background="@color/textgrey" />
+
+
+            <LinearLayout
+                android:layout_toRightOf="@id/doctorImg"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/docNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Dr. Varsha Degwekar"
+                    android:singleLine="true"
+                    android:textColor="@color/walktitle"
+                    android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/docTypeBtn"
+                        android:clickable="true"
+                        android:onClick="onGetStartedClick"
+                        android:text="Allopath"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="7dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="65dp"
+                        android:background="@drawable/textbackgrey"
+                        android:layout_height="16dp"/>
+
+                    <TextView
+                        android:id="@+id/specialityTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/docNameTv"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/docTypeBtn"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="left"
+                        android:text="Gynecologist/Obstetrician"
+                        android:singleLine="true"
+                        android:textColor="@color/spectextcolor"
+                        android:textSize="11sp" />
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        android:id="@+id/clinicAreaTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/lato_bold"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="Borivali West"
+                        android:textColor="@color/spectextcolor"
+                        android:textSize="11sp" />
+                    <TextView
+                        android:id="@+id/availablity"
+                        android:drawableStart="@drawable/ic_green_dot"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:drawablePadding="5dp"
+                        android:text="Available Today"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/greyborder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/clinicTag"
+                    android:text="Care and Cure Maternity And Nursing Home"
+                    android:singleLine="true"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="11sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/greyText"
+                android:layout_marginTop="10dp"
+                android:layout_height="0.3dp"/>
+            <LinearLayout
+                android:weightSum="300"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="100"
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Experience"
+                        android:singleLine="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/greyText"
+                        android:drawableStart="@drawable/ic_exp"
+                        android:drawablePadding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/workExp"
+                        android:text="30 years"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0.3dp"
+                    android:background="@color/textgrey"
+                    android:layout_height="match_parent"/>
+                <LinearLayout
+                    android:layout_weight="100"
+                    android:layout_width="0dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="patient Experience"
+                        android:singleLine="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/greyText"
+                        android:drawableStart="@drawable/ic_exp"
+                        android:drawablePadding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/patientExp"
+                        android:text="80"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0.3dp"
+                    android:background="@color/textgrey"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_weight="100"
+                    android:layout_width="0dp"
+                    android:paddingLeft="3dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_exp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Consultation Fee"
+                        android:singleLine="true"
+                        android:textColor="@color/greyText"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/consFee"
+                        android:text="Rs.500/-"
+                        android:singleLine="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/greyText"
+                android:layout_height="0.3dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:weightSum="100"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/viewProfileBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/whitebtnblueborder"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="View Profile"
+                    android:textColor="@color/walktitle"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/callClinicBtn"
+                    android:clickable="true"
+                    android:layout_margin="10dp"
+                    android:layout_weight="50"
+                    android:text="Book Appointment"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:layout_width="0dp"
+                    android:background="@drawable/btnbackblue"
+                    android:layout_height="35dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
