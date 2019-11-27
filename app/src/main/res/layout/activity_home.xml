@@ -8,6 +8,11 @@
     android:layout_height="match_parent"
     tools:context=".activities.HomeActivity">
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,7 +24,7 @@
             android:layout_below="@id/relativeLayout" >
 
             <com.life.unicore.others.ExpandableHeightGridView
-                android:id="@+id/hallsListGridView"
+                android:id="@+id/homeNavGridView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
@@ -28,6 +33,163 @@
                 android:numColumns="2"
                 android:scrollbars="none"
                 android:verticalSpacing="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/specOfferlayout"
+                android:layout_below="@id/homeNavGridView"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Find doctors in top specialities"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="13sp"
+                    android:textColor="@color/textcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="View All offers"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/walktitle"
+                    android:background="@drawable/clickable_trans_bg"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/specialistRecyclerView"
+                android:layout_below="@id/specOfferlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/specialistCardView"
+                android:layout_below="@id/specialistRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:id="@+id/familyHealthCardlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/yellowback">
+                    <ImageView
+                        android:id="@+id/fhcHommeImv"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/fhc_home"/>
+                    <TextView
+                        android:id="@+id/cardTitle"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_below="@id/fhcHommeImv"
+                        android:layout_centerHorizontal="true"
+                        android:singleLine="true"
+                        android:layout_marginTop="12dp"
+                        android:text="Unicore Life Health Credit Card"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/cardDesc"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardTitle"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:text="A new way to ensure you always stay healthy Earn 1 Unicore Health Cash for every Rs 100 spent."/>
+                    <Button
+                        android:id="@+id/getStartedBtn"
+                        android:layout_below="@id/cardDesc"
+                        android:clickable="true"
+                        android:text="Apply Now"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/walktitle"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="22dp"
+                        android:layout_marginLeft="53dp"
+                        android:layout_marginRight="53dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/btnbackwhite"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/hospitalslayout"
+                android:layout_below="@id/specialistCardView"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Find doctors in top hospitals"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="13sp"
+                    android:textColor="@color/textcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="View All"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="12sp"
+                    android:textColor="@color/walktitle"
+                    android:background="@drawable/clickable_trans_bg"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hospitalsRecyclerView"
+                android:layout_below="@id/hospitalslayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+            </androidx.recyclerview.widget.RecyclerView>
+
         </RelativeLayout>
 
 
@@ -82,31 +244,8 @@
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/searchViewContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone">
-
-                <SearchView
-                    android:id="@+id/searchView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="18dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/white"
-                    android:iconifiedByDefault="false"
-                    android:queryHint="Search Here" />
-
-            </LinearLayout>
-
-
-
-
     </RelativeLayout>
+    </ScrollView>
 
     <ScrollView
         android:id="@+id/scrollView"

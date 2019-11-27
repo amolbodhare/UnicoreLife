@@ -14,9 +14,9 @@
         android:background="#FAFFFFFF" />
 
     <androidx.viewpager.widget.ViewPager
-       android:id="@+id/slideViewPager"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+        android:id="@+id/slideViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <RelativeLayout
         android:id="@+id/titleBar"

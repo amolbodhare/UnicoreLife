@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/specialistCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@drawable/clickable_trans_bg"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/hospitalImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/diagwalk"/>
+        <TextView
+            android:id="@+id/hospitalTitle"
+            android:text="dfnfdn"
+            android:layout_marginTop="80dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="13sp"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
