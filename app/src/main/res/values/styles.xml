@@ -16,4 +16,10 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="customRatingBar"
+        parent="android:style/Widget.Material.RatingBar.Small">
+        <item name="colorAccent">#6200ea</item>
+        <item name="android:colorControlNormal">#f9a825</item>
+    </style>
+
 </resources>

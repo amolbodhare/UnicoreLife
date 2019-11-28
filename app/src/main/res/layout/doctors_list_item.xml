@@ -53,19 +53,20 @@
                     android:layout_marginTop="3dp"
                     android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content">
+
                     <Button
                         android:id="@+id/docTypeBtn"
+                        android:layout_width="65dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/textbackgrey"
                         android:clickable="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="center"
                         android:onClick="onGetStartedClick"
                         android:text="Allopath"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/lato_regular"
-                        android:textSize="7dp"
-                        android:gravity="center"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="65dp"
-                        android:background="@drawable/textbackgrey"
-                        android:layout_height="16dp"/>
+                        android:textSize="7dp" />
 
                     <TextView
                         android:id="@+id/specialityTv"
@@ -129,9 +130,9 @@
         </RelativeLayout>
             <View
                 android:layout_width="match_parent"
-                android:background="@color/greyText"
+                android:background="@color/bordercolor"
                 android:layout_marginTop="10dp"
-                android:layout_height="0.3dp"/>
+                android:layout_height="0.8dp"/>
             <LinearLayout
                 android:weightSum="300"
                 android:layout_marginLeft="10dp"
@@ -167,8 +168,8 @@
 
                 </LinearLayout>
                 <View
-                    android:layout_width="0.3dp"
-                    android:background="@color/textgrey"
+                    android:layout_width="0.8dp"
+                    android:background="@color/bordercolor"
                     android:layout_height="match_parent"/>
                 <LinearLayout
                     android:layout_weight="100"
@@ -199,10 +200,11 @@
                         android:layout_height="wrap_content"/>
 
                 </LinearLayout>
+
                 <View
-                    android:layout_width="0.3dp"
-                    android:background="@color/textgrey"
-                    android:layout_height="match_parent"/>
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bordercolor" />
 
                 <LinearLayout
                     android:layout_weight="100"
@@ -239,8 +241,8 @@
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:background="@color/greyText"
-                android:layout_height="0.3dp"/>
+                android:background="@color/bordercolor"
+                android:layout_height="0.8dp"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:weightSum="100"

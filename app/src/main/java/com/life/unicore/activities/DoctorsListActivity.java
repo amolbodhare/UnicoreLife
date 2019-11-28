@@ -76,6 +76,13 @@ public class DoctorsListActivity extends AppCompatActivity {
                                                int viewType) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.doctors_list_item, parent, false);
+            view.findViewById(R.id.viewProfileBtn).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i=new Intent(DoctorsListActivity.this,ProfileActivity.class);
+                    startActivity(i);
+                }
+            });
             //view.setOnClickListener(EventListFragment.myOnClickListener);
 
             MyViewHolder myViewHolder = new MyViewHolder(view);
