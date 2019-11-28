@@ -19,6 +19,17 @@
     <color name="fragmentbacke">#F2F8FC</color>
     <color name="textcolor">#313131</color>
     <color name="yellowback">#E9AB00</color>
+    <color name="searchviewborder">#EBEBEB</color>
+    <color name="textback">#EEEEEE</color>
+    <color name="spectextcolor">#212121</color>
+    <color name="bordercolor">#F3F3F3</color>
+    <color name="greyText">#8F8F8F</color>
+    <color name="icongrey">#707070</color>
+    <color name="darktext">#303030</color>
+    <color name="darktexttwo">#303030</color>
+    <color name="darktextthree">#333333</color>
+    <color name="lightgreyone">#A1A1A1</color>
+
 
 
 

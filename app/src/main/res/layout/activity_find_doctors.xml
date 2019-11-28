@@ -17,6 +17,7 @@
                 android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_alignParentTop="true"
+                android:background="@color/white"
                 android:layout_height="80dp">
 
                 <ImageView
@@ -27,9 +28,8 @@
                     android:layout_centerVertical="true"
                     android:background="@drawable/clickable_trans_bg"
                     android:clickable="true"
-                    android:padding="19dp"
-                    android:src="@drawable/ic_actionbar_drawer_menu"
-                    android:tint="@color/textgrey" />
+                    android:padding="16dp"
+                    android:src="@drawable/ic_backnavarrow" />
 
                 <TextView
                     android:id="@+id/titleName"
@@ -41,10 +41,9 @@
                     android:gravity="center_vertical"
                     android:ellipsize="marquee"
                     android:fontFamily="@font/lato_regular"
-                    android:letterSpacing="0.3"
                     android:marqueeRepeatLimit="marquee_forever"
                     android:singleLine="true"
-                    android:text="Home"
+                    android:text="Find \u0026 Book"
                     android:textAllCaps="true"
                     android:textColor="@color/navigationTitlecolor"
                     android:textSize="16sp" />
@@ -64,23 +63,65 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/searchViewContainer"
+                android:id="@+id/searchviewLayout"
                 android:layout_width="match_parent"
                 android:layout_below="@+id/relativeLayout"
-                android:layout_height="wrap_content">
+                android:layout_marginTop="-25dp"
+                android:background="@color/white"
+                android:layout_height="80dp">
 
                 <SearchView
                     android:id="@+id/searchView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="18dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="18dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@color/white"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/searchview_background"
                     android:iconifiedByDefault="false"
-                    android:queryHint="Search Here" />
+                    android:orientation="vertical"
+                    android:queryBackground="@color/transparent"
+                    android:queryHint="Search Here"
+                    android:soundEffectsEnabled="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/searchviewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:text="Search by health concern"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.life.unicore.others.ExpandableHeightGridView
+                    android:id="@+id/healthConcernGridView"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="20dp"
+                    android:verticalSpacing="3dp"
+                    android:numColumns="2"
+                    android:scrollbars="none" />
+
+                <Button
+                    android:id="@+id/searchMoreBtn"
+                    android:clickable="true"
+                    android:text="LOOKING FOR MORE ? SEARCH"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/btnbackblue"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 

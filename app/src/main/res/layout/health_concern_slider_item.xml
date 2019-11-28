@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/healthConcernCardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/clickable_trans_bg"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/healthconcernItem"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:background="@drawable/clickable_trans_bg"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/healthcareImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/eclipsewalk"
+                android:layout_centerVertical="true"
+                android:src="@drawable/hospitalswalk"/>
+            <TextView
+                android:id="@+id/healthCareTitle"
+                android:text="dfnfdn"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/healthcareImg"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

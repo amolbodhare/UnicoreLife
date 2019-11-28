@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/viewPagerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="105dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/dotContainer"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/docImv"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sample_doctor_img"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <TextView
+                        android:text="Dr. Varsha Degwekar"
+                        android:textColor="@color/white"
+                        android:singleLine="true"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="20dp"
+                        android:textSize="14sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <TextView
+                            android:text="Borivali West"
+                            android:textColor="@color/darktext"
+                            android:textSize="14sp"
+                            android:singleLine="true"
+                            android:fontFamily="@font/lato_regular"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="5dp"
+                                android:text="4.5"
+                                android:textColor="@color/walktitle" />
+
+                            <RatingBar
+                                android:id="@+id/ratingBar"
+                                style="@style/customRatingBar"
+                                android:layout_marginTop="7dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:numStars="4"
+                                android:stepSize="1.0"
+                                android:rating="2.0" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/docTypeBtn"
+                                android:layout_width="65dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/textbackgrey"
+                                android:clickable="true"
+                                android:fontFamily="@font/lato_regular"
+                                android:text="Allopath"
+                                android:textColor="@color/navigationTitlecolor"
+                                android:textSize="7dp" />
+
+                            <TextView
+                                android:id="@+id/specialityTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/lato_regular"
+                                android:text="Gynecologist/Obstetrician"
+                                android:singleLine="true"
+                                android:textColor="@color/darktexttwo"
+                                android:textSize="11sp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/bordercolor"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="0.8dp"/>
+                <LinearLayout
+                    android:weightSum="300"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_weight="100"
+                        android:layout_width="0dp"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="Experience"
+                            android:singleLine="true"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="11sp"
+                            android:textColor="@color/greyText"
+                            android:drawableStart="@drawable/ic_exp"
+                            android:drawablePadding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/workExp"
+                            android:text="30 years"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="11sp"
+                            android:textColor="@color/walktitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.8dp"
+                        android:background="@color/bordercolor"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_weight="100"
+                        android:layout_width="0dp"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="patient Experience"
+                            android:singleLine="true"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="11sp"
+                            android:textColor="@color/greyText"
+                            android:drawableStart="@drawable/ic_exp"
+                            android:drawablePadding="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/patientExp"
+                            android:text="80"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="11sp"
+                            android:textColor="@color/walktitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.8dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/bordercolor" />
+
+                    <LinearLayout
+                        android:layout_weight="100"
+                        android:layout_width="0dp"
+                        android:padding="10dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_exp"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="Consultation Fee"
+                            android:singleLine="true"
+                            android:textColor="@color/greyText"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/consFee"
+                            android:text="Rs.500/-"
+                            android:singleLine="true"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="11sp"
+                            android:textColor="@color/walktitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/bordercolor"
+                    android:layout_height="0.8dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Dr. Nanda R Kumar is a Gynecologist and Infertility Specialist in Chembur, Mumbai and has an experience of 15 years in these fields. Dr. Nanda R Kumar practices more..Dr. Nanda R Kumar is a Gynecologiist and Infertility Specialist in Chembur, Mumbai and has an experience of 15 years in these fields. Dr. Nanda R Kumar practices."
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/darktextthree"
+                        android:layout_width="match_parent"
+                        android:layout_margin="16dp"                        android:layout_height="wrap_content"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/bordercolor"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="0.8dp"/>
+                    <TextView
+                        android:text="Care \u0026 Cure Maternity And Nursing Home"
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/darktextthree"
+                        android:drawableStart="@drawable/ic_hospital_name"
+                        android:drawablePadding="12dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:drawableTint="@color/darktextthree"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="# 105/106, Muruti Darshan, Adi Shankaracharya Marg, Powai, Mumbai, Maharashtra, India, Landmark: Next To Bhavani Petrol Pump and Opposite IIT Powai., Mumbai"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:textColor="@color/lightgreyone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_margin="16dp"
+                        android:src="@drawable/sample_img"
+                        android:scaleType="fitXY" />
+                    <TextView
+                        android:text="Get Directions"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="11sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Timing"
+                        android:textColor="@color/darktextthree"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:drawablePadding="12dp"
+                        android:drawableStart="@drawable/ic_hospital_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:id="@+id/timingContainerLayout"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
