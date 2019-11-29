@@ -23,12 +23,30 @@
     <color name="textback">#EEEEEE</color>
     <color name="spectextcolor">#212121</color>
     <color name="bordercolor">#F3F3F3</color>
+    <color name="bordercolortwo">#F8F8F8</color>
+    <color name="availablecolor">#00CF23</color>
+
+
     <color name="greyText">#8F8F8F</color>
     <color name="icongrey">#707070</color>
     <color name="darktext">#303030</color>
     <color name="darktexttwo">#303030</color>
     <color name="darktextthree">#333333</color>
+    <color name="darktextfour">#4E4E4E</color>
+    <color name="darktextfive">#5E5E5E</color>
+    <color name="darktextsix">#4D4D4D</color>
+
+    <color name="lighrgreyone">#9D9D9D</color>
+    <color name="lighrgreytwo">#AFAFAF</color>
+
+
+    <color name="textviewback">#E8E8E8</color>
+
     <color name="lightgreyone">#A1A1A1</color>
+    <color name="layoutback">#F5FBFF</color>
+    <color name="statusbarcolor">#01558A</color>
+
+
 
 
 

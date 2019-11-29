@@ -65,7 +65,7 @@
                         android:gravity="center"
                         android:onClick="onGetStartedClick"
                         android:text="Allopath"
-                        android:textColor="@color/black"
+                        android:textColor="@color/icongrey"
                         android:textSize="7dp" />
 
                     <TextView
@@ -109,7 +109,7 @@
                         android:layout_centerVertical="true"
                         android:fontFamily="@font/lato_regular"
                         android:textSize="11sp"
-                        android:textColor="@color/greyborder"
+                        android:textColor="@color/availablecolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layoutback"
+    tools:context=".activities.AllTimingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/walktitle"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/drawerMenu"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/clickable_trans_bg"
+            android:clickable="true"
+            android:padding="19dp"
+            android:src="@drawable/ic_backnavarrow"
+            android:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/drawerMenu"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+
+                android:text="Clinic Timing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/lato_regular"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+            <TextView
+
+                android:text="Dr. Varsha Degwekar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/lato_regular"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_above="@id/bookAppointmentBtn"
+        android:layout_below="@id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:divider="@null"
+        android:dividerHeight="8dp" />
+
+    <Button
+        android:id="@+id/bookAppointmentBtn"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:text="BOOK APPOINTMENT"
+        android:textSize="16sp"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/btnbackblue"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

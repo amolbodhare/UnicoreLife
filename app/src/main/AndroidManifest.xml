@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ProfileActivity"></activity>
+        <activity android:name=".activities.PatientDetailsActivity"></activity>
+        <activity android:name=".activities.TimeSlotActivity" />
+        <activity android:name=".activities.AllServicesActivity" />
+        <activity android:name=".activities.AllTimingsActivity" />
+        <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.DoctorsListActivity" />
         <activity android:name=".activities.FindDoctorsActivity" />
         <activity android:name=".activities.HomeActivity" />

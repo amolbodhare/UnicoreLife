@@ -89,7 +89,7 @@
                                 android:id="@+id/ratingBar"
                                 style="@style/customRatingBar"
                                 android:layout_marginTop="7dp"
-                                android:layout_marginLeft="5dp"
+                                android:layout_marginLeft="40dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:numStars="4"
@@ -280,18 +280,21 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="40dp"
                         android:layout_marginRight="16dp"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="130dp"
-                        android:layout_margin="16dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="10dp"
                         android:src="@drawable/sample_img"
                         android:scaleType="fitXY" />
                     <TextView
                         android:text="Get Directions"
                         android:fontFamily="@font/lato_bold"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="40dp"
                         android:textSize="11sp"
                         android:textColor="@color/walktitle"
                         android:layout_width="match_parent"
@@ -311,9 +314,126 @@
                     <LinearLayout
                         android:id="@+id/timingContainerLayout"
                         android:orientation="vertical"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="40dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/viewAllTimings"
+                        android:text="All Timings"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="9sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Services"
+                        android:textColor="@color/darktextthree"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:drawablePadding="12dp"
+                        android:drawableStart="@drawable/ic_hospital_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/servicesContainerLayout"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/viewAllServices"
+                        android:text="View All Services"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="9sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Specialization"
+                        android:textColor="@color/darktextthree"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:drawablePadding="12dp"
+                        android:drawableStart="@drawable/ic_stethoscope"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/specializationContainerLayout"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="40dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Patient Experiences"
+                        android:textColor="@color/darktextthree"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:textSize="11sp"
+                        android:drawablePadding="12dp"
+                        android:drawableStart="@drawable/ic_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:id="@+id/patientExpContainerLayout"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Show all experiences (78)"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_marginLeft="40dp"
+                        android:textSize="11sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:weightSum="100"
+                        android:layout_margin="16dp"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/shareExpBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="50"
+                            android:background="@drawable/whitebtnblueborder"
+                            android:fontFamily="@font/lato_regular"
+                            android:text="SHARE EXPERIENCES"
+                            android:textColor="@color/walktitle"
+                            android:textSize="11sp" />
+
+                        <Button
+                            android:id="@+id/bookAppointBtn"
+                            android:clickable="true"
+                            android:layout_margin="10dp"
+                            android:layout_weight="50"
+                            android:text="Book Appointment"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="11sp"
+                            android:textColor="@color/white"
+                            android:layout_width="0dp"
+                            android:background="@drawable/btnbackblue"
+                            android:layout_height="35dp"/>
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
             </LinearLayout>

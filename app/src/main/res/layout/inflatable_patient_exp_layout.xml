@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="Mansi"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/darktextfour"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="11sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Doctor Varsha is an experienced gynaecologist with decades of experience. I went to her clinic for my pregnancy with some apprehension and she calmly cleared all of my doubts. I developed few complications during the course of my pregnancy but Dr Varsha handled them very ably and showed her true experience in the field. I would recommend Dr Varsha to anybody who wants a safe and enjoyable pregnancy."
+        android:textColor="@color/lighrgreyone"
+        android:gravity="start"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="11sp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp"/>
+
+    <RelativeLayout
+        android:id="@+id/inflatableBottomLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+        <TextView
+            android:text="Verified Account"
+            android:textColor="@color/darktextfive"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_alignParentLeft="true"
+            android:drawableStart="@drawable/ic_verified_thumbs_up"
+            android:drawablePadding="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/years"
+            android:text="3 years ago"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:textColor="@color/lighrgreytwo"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/bordercolor"
+        android:layout_marginTop="12dp"
+        android:layout_height="0.8dp"/>
+
+
+</LinearLayout>
