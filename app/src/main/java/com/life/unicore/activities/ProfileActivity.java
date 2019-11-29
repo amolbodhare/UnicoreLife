@@ -6,14 +6,18 @@ package com.life.unicore.activities;
         import androidx.viewpager.widget.ViewPager;
 
         import android.content.Context;
+        import android.content.Intent;
         import android.os.Bundle;
         import android.os.Handler;
         import android.text.Html;
         import android.view.LayoutInflater;
+        import android.view.TextureView;
         import android.view.View;
         import android.view.ViewGroup;
+        import android.widget.Button;
         import android.widget.ImageView;
         import android.widget.LinearLayout;
+        import android.widget.RelativeLayout;
         import android.widget.TextView;
 
         import com.life.unicore.R;
@@ -31,10 +35,43 @@ public class ProfileActivity extends AppCompatActivity implements ViewPager.OnPa
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         getWindow().setStatusBarColor(getResources().getColor(R.color.walktitle));
         context=ProfileActivity.this;
+
+        ((Button)findViewById(R.id.shareExpBtn)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+        ((Button)findViewById(R.id.bookAppointBtn)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        ((TextView)findViewById(R.id.viewAllTimings)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ProfileActivity.this,AllTimingsActivity.class);
+                startActivity(i);
+            }
+        });
+        ((TextView)findViewById(R.id.viewAllServices)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ProfileActivity.this,AllServicesActivity.class);
+                startActivity(i);
+            }
+        });
+
+
         viewPager = findViewById(R.id.viewPager);
         hitSlidersApi();
         viewPager.addOnPageChangeListener(this);
         timingsListview();
+        servicesListview();
+        specializationListview();
+        patientExpListview();
     }
 
     @Override
@@ -170,6 +207,56 @@ public class ProfileActivity extends AppCompatActivity implements ViewPager.OnPa
             LinearLayout ll = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.inflatable_textview, null);
             TextView timetv = (TextView) ll.getChildAt(0);
             timetv.setText("11:00 am - 01:00 pm");
+
+            //timetv.setOnCheckedChangeListener(this);
+            linearLayout.addView(ll);
+        }
+    }
+    private void servicesListview() {
+        int n = 4;
+
+        LinearLayout linearLayout = findViewById(R.id.servicesContainerLayout);
+
+        for (int j = 0; j < n; j++) {
+            LinearLayout ll = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.inflatable_textview, null);
+            TextView timetv = (TextView) ll.getChildAt(0);
+            timetv.setText("Normal Vaginal Delivery (NVD)");
+
+            //timetv.setOnCheckedChangeListener(this);
+            linearLayout.addView(ll);
+        }
+    }
+    private void specializationListview() {
+        int n = 4;
+
+        LinearLayout linearLayout = findViewById(R.id.specializationContainerLayout);
+
+        for (int j = 0; j < n; j++) {
+            LinearLayout ll = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.inflatable_textview, null);
+            TextView timetv = (TextView) ll.getChildAt(0);
+            timetv.setText("Gynecologist");
+
+            //timetv.setOnCheckedChangeListener(this);
+            linearLayout.addView(ll);
+        }
+    }
+    private void patientExpListview() {
+        int n = 2;
+
+        LinearLayout linearLayout = findViewById(R.id.patientExpContainerLayout);
+
+        for (int j = 0; j < n; j++) {
+            LinearLayout ll = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.inflatable_patient_exp_layout, null);
+            TextView nametv = (TextView) ll.getChildAt(0);
+            nametv.setText("Mansi");
+            TextView exptv = (TextView) ll.getChildAt(1);
+            exptv.setText("Doctor Varsha is an experienced gynaecologist with decades of experience. I went to her clinic for my pregnancy with some apprehension and she calmly cleared all of my doubts. I developed few complications during the course of my pregnancy but Dr Varsha handled them very ably and showed her true experience in the field. I would recommend Dr Varsha to anybody who wants a safe and enjoyable pregnancy.");
+
+            RelativeLayout horiLinLay=(RelativeLayout) ll.findViewById(R.id.inflatableBottomLay);
+            TextView verifiedtv=(TextView)horiLinLay.getChildAt(0);
+            verifiedtv.setText("Verified patient");
+            TextView durationtv=(TextView)horiLinLay.getChildAt(1);
+            durationtv.setText("3 years ago");
 
             //timetv.setOnCheckedChangeListener(this);
             linearLayout.addView(ll);

@@ -30,18 +30,19 @@ public class FindDoctorsActivity extends AppCompatActivity {
 
         public  int[] slider_images=
                 {
-                        R.drawable.ic_home_nav_doctors,R.drawable.hospitalswalk,R.drawable.diagwalk,
-                        R.drawable.ambulancewalk,R.drawable.bloodbankwalk,R.drawable.ic_home_nav_dots,
-                        R.drawable.ic_home_nav_doctors,R.drawable.hospitalswalk,R.drawable.diagwalk,
-                        R.drawable.ambulancewalk,R.drawable.bloodbankwalk,R.drawable.ic_home_nav_dots,
-                        R.drawable.ic_home_nav_doctors,R.drawable.hospitalswalk,R.drawable.diagwalk,
-                        R.drawable.ambulancewalk,R.drawable.bloodbankwalk,R.drawable.ic_home_nav_dots
+                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
+                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
+                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
+                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
+                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
+                        R.drawable.ic_womens,R.drawable.ic_womens
 
                 };
 
-        public  String[] slider_headings={"FIND DOCTORS","FIND HOSPITALS","DIGESTIVE CENTRE","AMBULANCE","BLOOD BANK","FIND MORE",
-                "FIND DOCTORS","FIND HOSPITALS","DIGESTIVE CENTRE","AMBULANCE","BLOOD BANK","FIND MORE",
-                "FIND DOCTORS","FIND HOSPITALS","DIGESTIVE CENTRE","AMBULANCE","BLOOD BANK","FIND MORE"};
+        public  String[] slider_headings={"Dentist","Women's Health","Skin & Hair","Child Specialist","Ear, Nose, Throut","Physiotherapist",
+                "General surgeon","Orthopedist","Sex Specialist","Homeopathy","Mental Wellness","Diabetes \n" +
+                "Managment",
+                "Ayurveda","Heart","Cancer","Brain & Nerves","Bones & joints"};
 
 
         @Override
