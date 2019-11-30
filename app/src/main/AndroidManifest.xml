@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.life.unicore">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PatientDetailsActivity"></activity>
+        <activity android:name=".activities.MembershipActivity"></activity>
+        <activity android:name=".activities.AppointmentDetailsActivty" />
+        <activity android:name=".activities.BookedSuccessfullyActivity" />
+        <activity android:name=".activities.WebViewActivity" />
+        <activity android:name=".activities.PatientDetailsActivity" />
         <activity android:name=".activities.TimeSlotActivity" />
         <activity android:name=".activities.AllServicesActivity" />
         <activity android:name=".activities.AllTimingsActivity" />

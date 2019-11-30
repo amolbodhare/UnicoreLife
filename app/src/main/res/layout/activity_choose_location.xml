@@ -45,11 +45,11 @@
 
     <ImageView
         android:id="@+id/locLogoImv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="80dp"
         android:layout_marginRight="16dp"
         android:src="@drawable/loc_icon" />
     <TextView
@@ -86,10 +86,10 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:background="@drawable/btnbackblue"
-        android:layout_height="wrap_content"/>
+        android:layout_height="40dp"/>
 
     <TextView
         android:id="@+id/orTv"
@@ -116,7 +116,7 @@
         android:layout_marginRight="15dp"
         android:layout_width="match_parent"
         android:background="@drawable/btnbackwhite"
-        android:layout_height="wrap_content"/>
+        android:layout_height="40dp"/>
 
 
 

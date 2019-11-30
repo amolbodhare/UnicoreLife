@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AppointmentDetailsActivty">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/walktitle"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/drawerMenu"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/clickable_trans_bg"
+            android:clickable="true"
+            android:onClick="onBack"
+            android:padding="19dp"
+            android:src="@drawable/ic_backnavarrow"
+            android:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/drawerMenu"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/lato_regular"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="Appointment Details"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_below="@id/relativeLayout"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/profileLayout"
+
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/hospitalswalk"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:fontFamily="@font/lato_bold"
+                        android:textSize="14sp"
+                        android:textColor="@color/walktitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dr. Varsha Degwekar" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="10dp"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="7sp"
+                            android:background="@drawable/textview_oval_back"
+                            android:text="Allopath" />
+                        <TextView
+                            android:layout_marginLeft="6dp"
+                            android:text="  Gynecologist/Obstetrician"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="11sp"
+                            android:textColor="@color/spectextcolor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/dateTimeLayout"
+                android:layout_below="@id/profileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:text="Date \u0026 Time"
+                    android:layout_marginLeft="16dp"
+                    android:textColor="@color/greyText"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Monday, 11 Nov 2019, 10:00 AM in 2 days"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/viewcolor"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="0.9dp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/dateTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:text="Care \u0026 Cure Maternity And Nursing Home"
+                    android:textColor="@color/darktextthree"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="30dp"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="# 105/106, Muruti Darshan, Adi Shankaracharya Marg, Powai, Mumbai, Maharashtra, India, Landmark: Next To Bhavani Petrol Pump and Opposite IIT Powai., Mumbai"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="11sp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/icongrey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/sample_img"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="100dp"/>
+
+                <TextView
+                    android:text="Get Directions"
+                    android:textColor="@color/walktitle"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="11sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/viewcolor"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="0.9dp"/>
+                <LinearLayout
+                    android:weightSum="100"
+                    android:layout_width="match_parent"
+                    android:padding="16dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="Book For"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/textgrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="Aniket Paste"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0.9dp"
+                        android:background="@color/viewcolor"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="50"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:text="Appointment ID"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="12sp"
+                            android:textColor="@color/textgrey"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:text="903589"
+                            android:fontFamily="@font/lato_regular"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/viewcolor"
+                    android:layout_height="0.9dp"/>
+
+                <TextView
+                    android:text="Manage your appointment better by visiting"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="16sp"
+                    android:textColor="@color/darktextnine"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="My Appointment"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/walktitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/bookAppointmentBtn"
+                    android:clickable="true"
+                    android:text="DONE"
+                    android:layout_marginTop="50dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/btnbackblue"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

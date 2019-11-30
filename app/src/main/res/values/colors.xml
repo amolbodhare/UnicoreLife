@@ -35,12 +35,27 @@
     <color name="darktextfour">#4E4E4E</color>
     <color name="darktextfive">#5E5E5E</color>
     <color name="darktextsix">#4D4D4D</color>
+    <color name="darktextseven">#343434</color>
+    <color name="darktexteight">#949494</color>
+    <color name="darktextnine">#848484</color>
+
+
+
+
+
 
     <color name="lighrgreyone">#9D9D9D</color>
     <color name="lighrgreytwo">#AFAFAF</color>
 
 
     <color name="textviewback">#E8E8E8</color>
+    <color name="edittexthint">#D1D1D1</color>
+    <color name="termscondition">#CE0000</color>
+    <color name="bookedsuccessback">#00CC3D</color>
+    <color name="viewcolor">#E2E2E2</color>
+
+
+
 
     <color name="lightgreyone">#A1A1A1</color>
     <color name="layoutback">#F5FBFF</color>

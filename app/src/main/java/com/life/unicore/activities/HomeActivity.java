@@ -35,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
         context=HomeActivity.this;
         drawerLayout = findViewById(R.id.drawerlayout);
         ((ExpandableHeightGridView) findViewById(R.id.homeNavGridView)).setAdapter(new HomeNavGridViewAdapter());
@@ -50,6 +51,10 @@ public class HomeActivity extends AppCompatActivity {
 
     public void NavigationDrawerClick(View view) {
         drawerLayout.openDrawer(GravityCompat.START);
+    }
+
+    public void onBack(View view) {
+        onBackPressed();
     }
 
     class HomeNavGridViewAdapter extends BaseAdapter {
@@ -125,6 +130,12 @@ public class HomeActivity extends AppCompatActivity {
     public void onDrawerMenuClick(View view)
     {
 
+        if(view.getId()==R.id.drawerMembershipLayout)
+        {
+            Intent i=new Intent(HomeActivity.this,MembershipActivity.class);
+            startActivity(i);
+            onDrawerCloseClick(findViewById(R.id.onDrawerClose));
+        }
     }
 
     public  void specialistSliderList()
