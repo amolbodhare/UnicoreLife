@@ -13,35 +13,35 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <RelativeLayout
             android:id="@+id/healthconcernItem"
-            android:gravity="center_horizontal"
             android:padding="2dp"
             android:background="@drawable/clickable_trans_bg"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="45dp">
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/healthcareImg"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/eclipsewalk"
                 android:layout_centerVertical="true"
                 android:src="@drawable/hospitalswalk"/>
+
             <TextView
                 android:id="@+id/healthCareTitle"
-                android:text="dfnfdn"
-                android:singleLine="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/healthcareImg"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="95dp"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/healthcareImg"
                 android:fontFamily="@font/lato_regular"
-                android:textSize="12sp"/>
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="Ear, Nose, Throut"
+                android:textSize="12sp" />
         </RelativeLayout>
 
 

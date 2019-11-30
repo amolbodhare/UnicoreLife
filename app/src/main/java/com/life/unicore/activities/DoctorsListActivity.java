@@ -28,6 +28,7 @@ public class DoctorsListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctors_list);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
 
         context=DoctorsListActivity.this;
         recyclerView = findViewById(R.id.doctorsListRecyclerView);
@@ -139,5 +140,8 @@ public class DoctorsListActivity extends AppCompatActivity {
         }
         // Filter Method
 
+    }
+    public void onBack(View view) {
+        onBackPressed();
     }
 }

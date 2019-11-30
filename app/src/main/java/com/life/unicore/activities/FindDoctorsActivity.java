@@ -19,6 +19,7 @@ public class FindDoctorsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_doctors);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
         ((ExpandableHeightGridView) findViewById(R.id.healthConcernGridView)).setAdapter(new HealthConcernGridViewAdapter());
         ((ExpandableHeightGridView) findViewById(R.id.healthConcernGridView)).setExpanded(true);
     }
@@ -93,5 +94,8 @@ public class FindDoctorsActivity extends AppCompatActivity {
             return convertView;
         }
 
+    }
+    public void onBack(View view) {
+        onBackPressed();
     }
 }

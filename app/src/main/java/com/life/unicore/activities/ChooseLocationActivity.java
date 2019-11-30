@@ -15,6 +15,7 @@ public class ChooseLocationActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_location);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.semi_transparent));
         findViewById(R.id.currentLocBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

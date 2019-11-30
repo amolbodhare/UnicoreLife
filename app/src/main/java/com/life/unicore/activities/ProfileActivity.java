@@ -32,7 +32,8 @@ public class ProfileActivity extends AppCompatActivity implements ViewPager.OnPa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        //getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        //it will move laayout under statusbar
         getWindow().setStatusBarColor(getResources().getColor(R.color.walktitle));
         context=ProfileActivity.this;
 
@@ -261,5 +262,8 @@ public class ProfileActivity extends AppCompatActivity implements ViewPager.OnPa
             //timetv.setOnCheckedChangeListener(this);
             linearLayout.addView(ll);
         }
+    }
+    public void onBack(View view) {
+        onBackPressed();
     }
 }

@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".activities.PatientDetailsActivity">
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -21,6 +22,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:background="@drawable/clickable_trans_bg"
+            android:onClick="onBack"
             android:clickable="true"
             android:padding="19dp"
             android:src="@drawable/ic_backnavarrow"
@@ -42,19 +44,28 @@
                 android:fontFamily="@font/lato_regular"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:singleLine="true"
-                android:text="Select a  time slot"
+                android:text="Enter Patient Details"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
         </LinearLayout>
 
     </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/profileLayout"
+    <ScrollView
         android:layout_below="@id/relativeLayout"
         android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/profileLayout"
+
+        android:layout_width="match_parent"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_height="wrap_content">
         <ImageView
             android:src="@drawable/hospitalswalk"
@@ -100,11 +111,12 @@
     </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/dateTimeLayout"
         android:layout_below="@id/profileLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
         <TextView
             android:text="Date \u0026 Time"
@@ -115,7 +127,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:text="Monday, 11 Nov 2019, 10:00 AM in 2 days"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/lato_regular"
             android:textSize="12sp"
             android:textColor="@color/black"
@@ -126,26 +138,164 @@
             android:background="@color/bordercolor"
             android:layout_marginTop="20dp"
             android:layout_height="0.8dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/layoutback"
-            android:orientation="vertical">
-            <TextView
-                android:text="Confirm Appointment"
-                android:fontFamily="@font/lato_bold"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:text="Book Appointment"
-                android:fontFamily="@font/lato_regular"
-                android:textSize="14sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
 
-        </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/dateTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layoutback"
+        android:orientation="vertical">
+        <TextView
+            android:text="Confirm Appointment"
+            android:fontFamily="@font/lato_bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Book Appointment"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="14sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/darktextseven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:hint="Name"
+            android:paddingLeft="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/edittexthint"
+            android:background="@drawable/edittext_oval_back"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_oval_back"
+            android:hint="Email Id"
+            android:textColorHint="@color/edittexthint" />
+
+        <EditText
+            android:hint="Phone No"
+            android:paddingLeft="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColorHint="@color/edittexthint"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_oval_back"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"/>
+
+        <Button
+            android:id="@+id/bookAppointmentBtn"
+            android:clickable="true"
+            android:text="CONFIRM BOOKING"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/btnbackblue"
+            android:layout_height="50dp"/>
+        <TextView
+            android:id="@+id/tAndC"
+            android:text="By booking the appointment, you agree to\n
+Unicorelife Terms and Conditions."
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/darktextseven"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Have more questions? Read our payment FAQs"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/darktextseven"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="No more billing queues, go cashless!"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:drawableStart="@drawable/ic_textviewbullet"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/walktitle"
+            android:textColor="@color/darktextfive"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Instant appointment confirmation"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:drawableStart="@drawable/ic_textviewbullet"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/walktitle"
+            android:textColor="@color/darktextfive"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Easy appointment management"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:drawableStart="@drawable/ic_textviewbullet"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/walktitle"
+            android:textColor="@color/darktextfive"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Appointment assured by Prime benefits"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:drawableStart="@drawable/ic_textviewbullet"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/walktitle"
+            android:textColor="@color/darktextfive"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Note: 10% cancellation charges applicable"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/darktextseven"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

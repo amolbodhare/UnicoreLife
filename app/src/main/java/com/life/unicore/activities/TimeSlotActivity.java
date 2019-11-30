@@ -26,4 +26,7 @@ public class TimeSlotActivity extends AppCompatActivity {
         });
 
     }
+    public void onBack(View view) {
+        onBackPressed();
+    }
 }

@@ -50,12 +50,13 @@
                             android:textSize="20sp" />
 
                         <ImageView
+                            android:id="@+id/onDrawerClose"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
+                            android:layout_marginRight="25dp"
                             android:clickable="true"
                             android:onClick="onDrawerCloseClick"
-                            android:layout_marginRight="25dp"
                             android:src="@drawable/ic_arrow_back_nav_24dp"
                             android:tint="@color/white" />
                     </RelativeLayout>
@@ -100,12 +101,13 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/drawerHomeLayout"
+                    android:id="@+id/drawerMyAppointmentLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:clickable="true"
                     android:gravity="center"
+                    android:background="@drawable/clickable_trans_bg"
                     android:onClick="onDrawerMenuClick"
                     android:padding="13dp">
 
@@ -123,12 +125,13 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/drawerMyProfileLayout"
+                    android:id="@+id/drawerTestBookingLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:gravity="center"
                     android:onClick="onDrawerMenuClick"
+                    android:background="@drawable/clickable_trans_bg"
                     android:padding="13dp"
                     android:visibility="visible">
 
@@ -145,35 +148,13 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/drawerNotificationLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    android:onClick="onDrawerMenuClick"
-                    android:padding="13dp">
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/lato_regular"
-                        android:paddingLeft="10dp"
-                        android:text="Notification"
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-
-                </LinearLayout>
-
                 <RelativeLayout
-                    android:id="@+id/drawerSyncNowLayout"
+                    android:id="@+id/drawerOrdersLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:onClick="onDrawerMenuClick"
+                    android:background="@drawable/clickable_trans_bg"
                     android:padding="13dp">
 
 
@@ -188,24 +169,15 @@
                         android:textColor="@color/white"
                         android:textSize="17sp" />
 
-                   <!-- <ImageView
-                        android:id="@+id/syncImageView"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_alignParentRight="true"
-                        android:text="0"
-                        android:textStyle="bold"
-                        android:src="@drawable/ic_sync_black_24dp"
-                        android:fontFamily="@font/raleway_medium" />-->
-
                 </RelativeLayout>
 
                 <LinearLayout
-                    android:id="@+id/drawerAboutApplayout"
+                    android:id="@+id/drawerConsultationlayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:gravity="center"
+                    android:background="@drawable/clickable_trans_bg"
                     android:onClick="onDrawerMenuClick"
                     android:padding="13dp">
 
@@ -225,11 +197,12 @@
 
 
                 <LinearLayout
-                    android:id="@+id/drawerContactLayout"
+                    android:id="@+id/drawerMyDoctorsLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:gravity="center"
+                    android:background="@drawable/clickable_trans_bg"
                     android:onClick="onDrawerMenuClick"
                     android:padding="13dp">
 
@@ -247,11 +220,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/drawerPrivacyPolicyLayout"
+                    android:id="@+id/drawerMembershipLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:gravity="center"
+                    android:background="@drawable/clickable_trans_bg"
                     android:onClick="onDrawerMenuClick"
                     android:padding="13dp">
 
@@ -275,11 +249,12 @@
                     android:background="@drawable/view_gradient_linear" />
 
                 <LinearLayout
-                    android:id="@+id/drawerLogoutLayout"
+                    android:id="@+id/drawerNotificationLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
                     android:gravity="center"
+                    android:background="@drawable/clickable_trans_bg"
                     android:onClick="onDrawerMenuClick"
                     android:padding="13dp">
 
@@ -300,6 +275,7 @@
                     android:clickable="true"
                     android:gravity="center"
                     android:onClick="onDrawerMenuClick"
+                    android:background="@drawable/clickable_trans_bg"
                     android:padding="13dp">
 
                     <TextView
@@ -319,6 +295,7 @@
                     android:clickable="true"
                     android:gravity="center"
                     android:onClick="onDrawerMenuClick"
+                    android:background="@drawable/clickable_trans_bg"
                     android:padding="13dp">
 
                     <TextView
@@ -327,6 +304,26 @@
                         android:layout_gravity="center"
                         android:fontFamily="@font/lato_regular"
                         android:text="Settings"
+                        android:textColor="@color/white"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/drawerLogoutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onDrawerMenuClick"
+                    android:background="@drawable/clickable_trans_bg"
+                    android:padding="13dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Logout"
                         android:textColor="@color/white"
                         android:textSize="17sp" />
 

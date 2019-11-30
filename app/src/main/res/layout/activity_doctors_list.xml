@@ -24,6 +24,7 @@
                     android:layout_height="?actionBarSize"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
+                    android:onClick="onBack"
                     android:background="@drawable/clickable_trans_bg"
                     android:clickable="true"
                     android:padding="16dp"

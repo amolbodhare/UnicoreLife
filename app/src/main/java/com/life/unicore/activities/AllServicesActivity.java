@@ -70,4 +70,7 @@ public class AllServicesActivity extends AppCompatActivity {
 
         }
     }
+    public void onBack(View view) {
+        onBackPressed();
+    }
 }
