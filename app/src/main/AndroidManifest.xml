@@ -18,7 +18,6 @@
         <activity android:name=".activities.LoginScreen" />
         <activity android:name=".activities.MembershipActivity" />
         <activity android:name=".activities.LocationActivity"></activity>
-        <activity android:name=".activities.MembershipActivity" />
         <activity android:name=".activities.AppointmentDetailsActivty" />
         <activity android:name=".activities.BookedSuccessfullyActivity" />
         <activity android:name=".activities.WebViewActivity" />

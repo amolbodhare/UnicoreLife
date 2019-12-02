@@ -174,6 +174,7 @@ public class HomeActivity extends AppCompatActivity {
         hospitalnames.add("Fortis Hospital");
         hospitalnames.add("Apollo Hospital");
 
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.hospitalsRecyclerView);
         recyclerView.setLayoutManager(layoutManager);
