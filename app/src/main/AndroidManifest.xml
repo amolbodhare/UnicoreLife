@@ -13,6 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.OtpActivity"></activity>
+        <activity android:name=".activities.RegistrationActivity" />
+        <activity android:name=".activities.LoginScreen" />
+        <activity android:name=".activities.MembershipActivity" />
         <activity android:name=".activities.LocationActivity"></activity>
         <activity android:name=".activities.MembershipActivity" />
         <activity android:name=".activities.AppointmentDetailsActivty" />
