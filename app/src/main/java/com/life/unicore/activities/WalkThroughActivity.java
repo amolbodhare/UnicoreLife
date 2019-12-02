@@ -40,8 +40,16 @@ public class WalkThroughActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //it will remove status bar
         //getWindow().getDecorView().setSystemUiVisibility(0);
-        getWindow().setStatusBarColor(getResources().getColor(R.color.semi_transparent));
+
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        //it will move laayout under statusbar
+
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+        getWindow().setStatusBarColor(getResources().getColor(R.color.transparent));
+
 
         setContentView(R.layout.activity_walk_through);
 

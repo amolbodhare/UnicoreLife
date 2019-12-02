@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FAFFFFFF" />
+
     <RelativeLayout
         android:id="@+id/titleBar"
         android:layout_width="match_parent"
@@ -43,23 +44,28 @@
 
     </RelativeLayout>
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/locLogoImv"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
         android:src="@drawable/loc_icon" />
+
     <TextView
         android:id="@+id/welcomeTitle"
         android:layout_below="@id/locLogoImv"
         android:text="Hello,nice to\nmeet you !"
         android:textColor="@color/walktitle"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:textSize="30sp"
         android:fontFamily="@font/lato_black"
         android:layout_width="wrap_content"
@@ -71,8 +77,8 @@
     doctors, hospitals,etc. around you"
         android:textColor="@color/textgrey"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:textSize="18sp"
         android:fontFamily="@font/lato_regular"
         android:layout_width="wrap_content"
@@ -84,12 +90,12 @@
         android:text="USE CURRENT LOCATION"
         android:textColor="@color/white"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="35dp"
         android:layout_width="match_parent"
         android:background="@drawable/btnbackblue"
-        android:layout_height="40dp"/>
+        android:layout_height="45dp"/>
 
     <TextView
         android:id="@+id/orTv"
@@ -112,11 +118,12 @@
         android:textColor="@color/textgrey"
         android:layout_gravity="center_vertical"
         android:layout_marginBottom="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_width="match_parent"
         android:background="@drawable/btnbackwhite"
-        android:layout_height="40dp"/>
+        android:layout_height="45dp"/>
+    </RelativeLayout>
 
 
 

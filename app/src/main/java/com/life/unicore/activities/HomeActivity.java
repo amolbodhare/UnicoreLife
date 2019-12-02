@@ -1,28 +1,28 @@
 package com.life.unicore.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.appcompat.app.AppCompatActivity;
+        import androidx.core.view.GravityCompat;
+        import androidx.drawerlayout.widget.DrawerLayout;
+        import androidx.recyclerview.widget.LinearLayoutManager;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
+        import android.content.Context;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.util.Log;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.BaseAdapter;
+        import android.widget.ImageView;
+        import android.widget.TextView;
 
 
-import com.life.unicore.R;
-import com.life.unicore.others.ExpandableHeightGridView;
+        import com.life.unicore.R;
+        import com.life.unicore.others.ExpandableHeightGridView;
 
-import java.util.ArrayList;
+        import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -144,6 +144,15 @@ public class HomeActivity extends AppCompatActivity {
         specialistnames.add("Dentist");
         specialistnames.add("Gynecologist");
         specialistnames.add("Dietitian/Nutrition");
+        specialistnames.add("Skin Specialist");
+        specialistnames.add("Hair Specialist");
+        specialistnames.add("Dermatologist");
+        specialistnames.add("Dentist");
+        specialistnames.add("Gynecologist");
+        specialistnames.add("Dietitian/Nutrition");
+        specialistnames.add("Skin Specialist");
+        specialistnames.add("Hair Specialist");
+        specialistnames.add("Dermatologist");
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.specialistRecyclerView);
@@ -155,6 +164,12 @@ public class HomeActivity extends AppCompatActivity {
     public  void hospitalsSliderList()
     {
 
+        hospitalnames.add("Apollo Hospital");
+        hospitalnames.add("Fortis Hospital");
+        hospitalnames.add("Apollo Hospital");
+        hospitalnames.add("Apollo Hospital");
+        hospitalnames.add("Fortis Hospital");
+        hospitalnames.add("Apollo Hospital");
         hospitalnames.add("Apollo Hospital");
         hospitalnames.add("Fortis Hospital");
         hospitalnames.add("Apollo Hospital");

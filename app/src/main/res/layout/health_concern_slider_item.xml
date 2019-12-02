@@ -6,7 +6,6 @@
     android:id="@+id/healthConcernCardView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/clickable_trans_bg"
     android:clickable="true"
     android:focusable="true"
     app:cardElevation="5dp"
@@ -18,7 +17,7 @@
         <RelativeLayout
             android:id="@+id/healthconcernItem"
             android:padding="2dp"
-            android:background="@drawable/clickable_trans_bg"
+            android:background="@drawable/blue_back_btn_click"
             android:layout_width="wrap_content"
             android:layout_height="45dp">
             <de.hdodenhof.circleimageview.CircleImageView

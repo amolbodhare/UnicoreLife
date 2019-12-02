@@ -15,8 +15,11 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideViewPager"
+        android:layout_below="@id/titleBar"
+        android:layout_above="@id/bottomButtonLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content" />
 
     <RelativeLayout
         android:id="@+id/titleBar"
@@ -49,6 +52,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/bottomButtonLayout"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
@@ -61,7 +65,7 @@
             android:layout_height="55dp"
             android:elevation="12dp"
             android:layout_marginBottom="35dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="35dp"
             android:layout_centerVertical="true"
@@ -133,7 +137,7 @@
             android:elevation="12dp"
             android:layout_marginBottom="35dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="15dp"
             android:layout_marginTop="35dp"
             android:layout_centerVertical="true"
             android:background="@drawable/btnnextoval"

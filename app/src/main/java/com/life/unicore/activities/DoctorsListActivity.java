@@ -2,17 +2,22 @@ package com.life.unicore.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.life.unicore.R;
@@ -23,6 +28,7 @@ public class DoctorsListActivity extends AppCompatActivity {
     private static RecyclerView recyclerView;
     private Context context;
     DoctorsListAdapter doctorsListAdapter;
+     SearchView searchview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,7 @@ public class DoctorsListActivity extends AppCompatActivity {
 
         context=DoctorsListActivity.this;
         recyclerView = findViewById(R.id.doctorsListRecyclerView);
+        searchview=findViewById(R.id.searchView);
 
         layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
