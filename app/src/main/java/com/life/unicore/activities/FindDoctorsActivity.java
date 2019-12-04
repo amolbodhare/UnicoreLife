@@ -1,13 +1,17 @@
 package com.life.unicore.activities;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
 import android.widget.TextView;
 
 import com.life.unicore.R;
@@ -15,10 +19,15 @@ import com.life.unicore.others.ExpandableHeightGridView;
 
 public class FindDoctorsActivity extends AppCompatActivity {
 
+
+    SearchView searchView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_doctors);
+        searchView=findViewById(R.id.searchView);
+        searchView.setLayoutParams(new ActionBar.LayoutParams(Gravity.RIGHT));
+
         getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
         ((ExpandableHeightGridView) findViewById(R.id.healthConcernGridView)).setAdapter(new HealthConcernGridViewAdapter());
         ((ExpandableHeightGridView) findViewById(R.id.healthConcernGridView)).setExpanded(true);
