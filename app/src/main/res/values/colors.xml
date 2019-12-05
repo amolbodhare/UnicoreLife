@@ -27,6 +27,10 @@
     <color name="availablecolor">#00CF23</color>
     <color name="blueOne">#0069AB</color>
 
+    <color name="inactivetext">#CFCFCF</color>
+    <color name="red">#FF0000</color>
+
+
 
     <color name="greyText">#8F8F8F</color>
     <color name="icongrey">#707070</color>
