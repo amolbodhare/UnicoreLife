@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/sample_img"
+            android:scaleType="fitXY"
+            android:layout_width="45dp"
+            android:layout_height="45dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/drName"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="14sp"
+                android:textColor="@color/walktitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dr. Varsha Degwekar" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/doctorType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="7sp"
+                    android:background="@drawable/textview_oval_back"
+                    android:text="Allopath" />
+                <TextView
+                    android:id="@+id/doctorSpeciality"
+                    android:layout_marginLeft="6dp"
+                    android:text="  Gynecologist/Obstetrician"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="11sp"
+                    android:textColor="@color/spectextcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/appointmentTiming"
+                    android:text="Monday, 11 Nov 2019, 10:00 AM  in 2 days"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="9sp"
+                    android:textColor="@color/inactivetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginLeft="6dp"
+                    android:text="Cancel"
+                    android:visibility="gone"
+                    android:fontFamily="@font/lato_regular"
+                    android:textSize="10sp"
+                    android:textColor="@color/red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/viewcolor"
+        android:layout_height="0.6dp"/>
+
+</LinearLayout>

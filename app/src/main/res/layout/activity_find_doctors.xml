@@ -85,6 +85,7 @@
                     android:queryBackground="@color/transparent"
                     android:queryHint="Search Here"
                     android:soundEffectsEnabled="true" />
+
             </LinearLayout>
             <LinearLayout
                 android:layout_below="@id/searchviewLayout"

@@ -136,6 +136,18 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(i);
             onDrawerCloseClick(findViewById(R.id.onDrawerClose));
         }
+        if(view.getId()==R.id.drawerMyAppointmentLayout)
+        {
+            Intent i=new Intent(HomeActivity.this, MyAppointmentsActivity.class);
+            startActivity(i);
+            onDrawerCloseClick(findViewById(R.id.onDrawerClose));
+        }
+        if(view.getId()==R.id.drawerMyDoctorsLayout)
+        {
+            Intent i=new Intent(HomeActivity.this, MyDoctorsActivity.class);
+            startActivity(i);
+            onDrawerCloseClick(findViewById(R.id.onDrawerClose));
+        }
     }
 
     public  void specialistSliderList()
