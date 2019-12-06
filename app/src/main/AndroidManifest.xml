@@ -13,8 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MyDoctorsActivity"></activity>
-        <activity android:name=".activities.MyAppointmentsActivity"></activity>
+        <activity android:name=".activities.MyProfileActivity"></activity>
+        <activity android:name=".activities.MyDoctorsActivity" />
+        <activity android:name=".activities.MyAppointmentsActivity" />
         <activity
             android:name=".activities.ManualSelectLocationActivity"
             android:theme="@style/DarkActionBar" />

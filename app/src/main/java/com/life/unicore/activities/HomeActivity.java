@@ -57,6 +57,13 @@ public class HomeActivity extends AppCompatActivity {
         onBackPressed();
     }
 
+
+    public void viewProfileEditClick(View view) {
+        Intent i=new Intent(HomeActivity.this,MyProfileActivity.class);
+        startActivity(i);
+    }
+
+
     class HomeNavGridViewAdapter extends BaseAdapter {
 
         private TextView textView_navTitle;
