@@ -16,9 +16,7 @@
         <activity android:name=".activities.MyProfileActivity"></activity>
         <activity android:name=".activities.MyDoctorsActivity" />
         <activity android:name=".activities.MyAppointmentsActivity" />
-        <activity
-            android:name=".activities.ManualSelectLocationActivity"
-            android:theme="@style/DarkActionBar" />
+        <activity android:name=".activities.ManualSelectLocationActivity"/>
         <activity android:name=".activities.OtpActivity" />
         <activity android:name=".activities.RegistrationActivity" />
         <activity android:name=".activities.LoginScreen" />

@@ -78,7 +78,9 @@ public class ChooseLocationActivity extends AppCompatActivity
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        client.getLastLocation().addOnSuccessListener(ChooseLocationActivity.this, new OnSuccessListener<Location>() {
+        Intent i=new Intent(ChooseLocationActivity.this,LoginScreen.class);
+        startActivity(i);
+       /* client.getLastLocation().addOnSuccessListener(ChooseLocationActivity.this, new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(Location location)
             {
@@ -100,7 +102,7 @@ public class ChooseLocationActivity extends AppCompatActivity
 
             }
 
-        });
+        });*/
 
 
     }
