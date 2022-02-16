@@ -31,6 +31,7 @@ public class AllServicesActivity extends AppCompatActivity {
 
                 Intent i=new Intent(AllServicesActivity.this,TimeSlotActivity.class);
                 startActivity(i);
+
             }
         });
     }
