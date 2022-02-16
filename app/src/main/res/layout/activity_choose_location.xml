@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FAFFFFFF" />
+        android:background="#F7FFFFFF" />
 
     <RelativeLayout
         android:id="@+id/titleBar"
@@ -51,8 +51,8 @@
         android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/locLogoImv"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="17dp"
         android:layout_marginRight="17dp"
@@ -73,8 +73,7 @@
     <TextView
         android:id="@+id/locDesc"
         android:layout_below="@id/welcomeTitle"
-        android:text="Set your location to start  find
-    doctors, hospitals,etc. around you"
+        android:text="Set your location to start  find doctors, hospitals,etc. around you"
         android:textColor="@color/textgrey"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="25dp"

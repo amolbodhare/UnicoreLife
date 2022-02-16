@@ -9,7 +9,7 @@
     android:clickable="true"
     android:focusable="true"
     app:cardElevation="5dp"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="false">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -20,14 +20,15 @@
             android:background="@drawable/blue_back_btn_click"
             android:layout_width="wrap_content"
             android:layout_height="45dp">
+
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/healthcareImg"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="5dp"
                 android:background="@drawable/eclipsewalk"
                 android:layout_centerVertical="true"
-                android:src="@drawable/hospitalswalk"/>
+                android:src="@drawable/ic_general_surgon"/>
 
             <TextView
                 android:id="@+id/healthCareTitle"
@@ -39,7 +40,7 @@
                 android:fontFamily="@font/lato_regular"
                 android:gravity="left"
                 android:singleLine="true"
-                android:text="Ear, Nose, Throut"
+                android:text="Ear,Nose,Throat"
                 android:textSize="12sp" />
         </RelativeLayout>
 

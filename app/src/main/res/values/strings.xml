@@ -4,4 +4,31 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="locationlist">
+
+        <item>Banglore</item>
+        <item>Chennai</item>
+        <item>Delhi</item>
+        <item>Hyderabad</item>
+        <item>Mumbai</item>
+        <item>Pune</item>
+        <item>Jaipur</item>
+        <item>Kolkata</item>
+        <item>Bhopal</item>
+        <item>Patna</item>
+        <item>Surat</item>
+        <item>Raipur</item>
+        <item>Dehradun</item>
+        <item>Rajasthan</item>
+        <item>Guwahati</item>
+        <item>Bihar</item>
+        <item>Goa</item>
+        <item>Punjab</item>
+        <item>Shrinagar</item>
+
+    </string-array>
+    <string name="backdrop_title">LOVE MUSIC</string>
+    <string name="backdrop_subtitle">This season top 20 albums</string>
+
 </resources>

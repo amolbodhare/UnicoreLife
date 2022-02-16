@@ -4,6 +4,10 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
@@ -29,7 +33,7 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
-                android:background="@color/textgrey" />
+                android:background="@color/shimmercolor" />
 
 
             <LinearLayout
@@ -43,9 +47,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/lato_bold"
-                    android:text="Dr. Varsha Degwekar"
                     android:singleLine="true"
                     android:textColor="@color/walktitle"
+                    android:background="@color/shimmercolor"
                     android:textSize="14sp" />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -54,12 +58,12 @@
                     android:layout_marginLeft="10dp"
                     android:layout_height="wrap_content">
 
-                    <Button
+                    <TextView
                         android:id="@+id/docTypeBtn"
-                        android:layout_width="65dp"
-                        android:layout_height="14dp"
+                        android:layout_width="60dp"
+                        android:layout_height="15dp"
                         android:layout_gravity="center_vertical"
-                        android:background="@drawable/textbackgrey"
+                        android:background="@drawable/textview_oval_back"
                         android:clickable="true"
                         android:fontFamily="@font/lato_regular"
                         android:gravity="center"
@@ -80,6 +84,7 @@
                         android:text="Gynecologist/Obstetrician"
                         android:singleLine="true"
                         android:textColor="@color/spectextcolor"
+                        android:background="@color/shimmercolor"
                         android:textSize="11sp" />
 
 
@@ -96,8 +101,8 @@
                         android:fontFamily="@font/lato_bold"
                         android:gravity="left"
                         android:singleLine="true"
-                        android:text="Borivali West"
                         android:textColor="@color/spectextcolor"
+                        android:background="@color/shimmercolor"
                         android:textSize="11sp" />
                     <TextView
                         android:id="@+id/availablity"
@@ -110,6 +115,7 @@
                         android:fontFamily="@font/lato_regular"
                         android:textSize="11sp"
                         android:textColor="@color/availablecolor"
+                        android:background="@color/shimmercolor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -121,6 +127,7 @@
                     android:singleLine="true"
                     android:fontFamily="@font/lato_regular"
                     android:textSize="11sp"
+                    android:background="@color/shimmercolor"
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -147,9 +154,11 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/expTitleTv"
                         android:text="Experience"
                         android:singleLine="true"
                         android:fontFamily="@font/lato_regular"
+                        android:background="@color/shimmercolor"
                         android:textSize="11sp"
                         android:textColor="@color/greyText"
                         android:drawableStart="@drawable/ic_exp"
@@ -158,13 +167,14 @@
                         android:layout_height="wrap_content"/>
 
                     <TextView
-                        android:id="@+id/workExp"
-                        android:text="30 years"
-                        android:fontFamily="@font/lato_regular"
-                        android:textSize="11sp"
-                        android:textColor="@color/walktitle"
+                        android:id="@+id/expTv"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="30 years"
+                        android:textColor="@color/walktitle"
+                        android:background="@color/shimmercolor"
+                        android:textSize="11sp" />
 
                 </LinearLayout>
                 <View
@@ -180,21 +190,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/patExpTitleTv"
                         android:text="patient Experience"
                         android:singleLine="true"
                         android:fontFamily="@font/lato_regular"
                         android:textSize="11sp"
                         android:textColor="@color/greyText"
+                        android:background="@color/shimmercolor"
                         android:drawableStart="@drawable/ic_exp"
                         android:drawablePadding="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
                     <TextView
-                        android:id="@+id/patientExp"
+                        android:id="@+id/patientExpTv"
                         android:text="80"
                         android:fontFamily="@font/lato_regular"
                         android:textSize="11sp"
+                        android:background="@color/shimmercolor"
                         android:textColor="@color/walktitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -216,14 +229,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/consulFeeTitleTv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_exp"
                         android:drawablePadding="5dp"
                         android:fontFamily="@font/lato_regular"
-                        android:text="Consultation Fee"
                         android:singleLine="true"
+                        android:text="Consultation Fee"
                         android:textColor="@color/greyText"
+                        android:background="@color/shimmercolor"
                         android:textSize="11sp" />
 
                     <TextView
@@ -232,6 +247,7 @@
                         android:singleLine="true"
                         android:fontFamily="@font/lato_regular"
                         android:textSize="11sp"
+                        android:background="@color/shimmercolor"
                         android:textColor="@color/walktitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -254,7 +270,7 @@
                     android:layout_height="35dp"
                     android:layout_margin="10dp"
                     android:layout_weight="50"
-                    android:background="@drawable/whitebtnblueborder"
+                    android:background="@drawable/btnbackwhiteblueborder"
                     android:fontFamily="@font/lato_regular"
                     android:text="View Profile"
                     android:textColor="@color/walktitle"
@@ -278,5 +294,7 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
 </LinearLayout>

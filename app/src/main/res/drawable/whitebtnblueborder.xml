@@ -4,8 +4,6 @@
         android:angle="180"
         android:endColor="@color/white" />
     <corners android:radius="30dp"/>
-    <stroke
-        android:width="0.5dp"
-        android:color="@color/walktitle" />
+
 
 </shape>

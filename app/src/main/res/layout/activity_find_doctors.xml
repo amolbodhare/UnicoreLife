@@ -107,8 +107,8 @@
                     android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:horizontalSpacing="20dp"
-                    android:verticalSpacing="3dp"
+                    android:horizontalSpacing="10dp"
+                    android:verticalSpacing="15dp"
                     android:numColumns="2"
                     android:scrollbars="none" />
 

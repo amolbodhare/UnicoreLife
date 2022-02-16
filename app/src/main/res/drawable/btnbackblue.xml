@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <gradient android:startColor="@color/walktitle"
-        android:angle="180"
-        android:endColor="@color/walktitle" />
-    <corners android:radius="30dp"/>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
 
-</shape>
+        <shape android:shape="rectangle">
+
+            <solid android:color="#660069AB"/><!---g4-->
+            <corners android:radius="30dp"/>
+        </shape>
+
+    </item>
+
+    <item android:state_pressed="false">
+
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/walktitle"/>
+            <corners android:radius="30dp"/>
+
+        </shape>
+
+    </item>
+
+</selector>

@@ -44,12 +44,14 @@ public class ProfileActivity extends AppCompatActivity implements ViewPager.OnPa
 
             }
         });
+
         ((Button)findViewById(R.id.bookAppointBtn)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
             }
         });
+
         ((TextView)findViewById(R.id.viewAllTimings)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,6 +59,7 @@ public class ProfileActivity extends AppCompatActivity implements ViewPager.OnPa
                 startActivity(i);
             }
         });
+
         ((TextView)findViewById(R.id.viewAllServices)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

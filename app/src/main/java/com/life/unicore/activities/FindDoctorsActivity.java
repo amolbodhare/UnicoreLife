@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.life.unicore.R;
 import com.life.unicore.others.ExpandableHeightGridView;
+import com.squareup.picasso.Picasso;
 
 public class FindDoctorsActivity extends AppCompatActivity {
 
@@ -39,16 +40,15 @@ public class FindDoctorsActivity extends AppCompatActivity {
 
         public  int[] slider_images=
                 {
-                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
-                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
-                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
-                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
-                        R.drawable.ic_womens,R.drawable.ic_womens,R.drawable.ic_womens,
-                        R.drawable.ic_womens,R.drawable.ic_womens
-
+                        R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,
+                        R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,
+                        R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,
+                        R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,
+                        R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,R.drawable.ic_general_surgon,
+                        R.drawable.ic_general_surgon,R.drawable.ic_general_surgon
                 };
 
-        public  String[] slider_headings={"Dentist","Women's Health","Skin & Hair","Child Specialist","Ear, Nose, Throut","Physiotherapist",
+        public  String[] slider_headings={"Dentist","Women's Health","Skin & Hair","Child Specialist","Ear, Nose, Throat","Physiotherapist",
                 "General surgeon","Orthopedist","Sex Specialist","Homeopathy","Mental Wellness","Diabetes \n" +
                 "Managment",
                 "Ayurveda","Heart","Cancer","Brain & Nerves","Bones & joints"};
@@ -82,7 +82,17 @@ public class FindDoctorsActivity extends AppCompatActivity {
                 imageView_nav = convertView.findViewById(R.id.healthcareImg);
 
                 textView_navTitle.setText(slider_headings[position]);
-                imageView_nav.setImageResource(slider_images[position]);
+
+                try {
+                    //Picasso.get().load(imageList.get(position)).into(imageView);
+                    //Picasso.get().load(slider_images[position]).into(imageView_nav);
+                    Picasso.get().load("https://images.unsplash.com/photo-1561766926-a7c863179e15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80").into(imageView_nav);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                //imageView_nav.setImageResource();
 
 
                 convertView.findViewById(R.id.healthConcernCardView).setOnClickListener(new View.OnClickListener() {

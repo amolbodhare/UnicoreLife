@@ -7,63 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".activities.ManualSelectLocationActivity">
 
-   <RelativeLayout
-       android:id="@+id/relativeLayout"
+   <LinearLayout
+       android:id="@+id/toolbatLayout"
        android:layout_width="match_parent"
-       android:layout_alignParentTop="true"
        android:background="@color/walktitle"
        android:layout_height="80dp">
 
-      <ImageView
-          android:id="@+id/drawerMenu"
-          android:layout_width="?actionBarSize"
-          android:layout_height="?actionBarSize"
-          android:layout_alignParentLeft="true"
-          android:layout_centerVertical="true"
-          android:background="@drawable/clickable_trans_bg"
-          android:clickable="true"
-          android:onClick="onBack"
-          android:padding="19dp"
-          android:src="@drawable/ic_backnavarrow"
-          android:tint="@color/white" />
-
-      <LinearLayout
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="5dp"
-          android:layout_toRightOf="@id/drawerMenu"
-          android:layout_centerVertical="true"
-          android:orientation="vertical">
-         <TextView
-
-             android:text="Select your city"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:ellipsize="marquee"
-             android:fontFamily="@font/lato_regular"
-             android:marqueeRepeatLimit="marquee_forever"
-             android:singleLine="true"
-             android:textColor="@color/white"
-             android:textSize="14sp" />
-      </LinearLayout>
-      <ImageView
-          android:id="@+id/searchIcon"
-          android:src="@drawable/places_ic_search"
-          android:layout_width="wrap_content"
-          android:layout_marginRight="16dp"
-          android:layout_centerVertical="true"
-          android:tint="@color/white"
-          android:layout_alignParentRight="true"
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:background="@null"
+          app:popupTheme="@style/AppTheme"
+          app:titleTextColor="@color/white"
+          android:theme="@style/ToolbarColoredBackArrow"
+          android:layout_gravity="center_vertical"
+          android:layout_width="match_parent"
           android:layout_height="wrap_content"/>
-
-   </RelativeLayout>
+   </LinearLayout>
    <LinearLayout
-       android:layout_below="@id/relativeLayout"
+       android:layout_below="@id/toolbatLayout"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical">
       <RelativeLayout
-
+          android:id="@+id/currentLocLayout"
+          android:clickable="true"
+          android:background="@drawable/clickable_trans_bg"
           android:layout_width="match_parent"
           android:layout_height="50dp">
          <ImageView
@@ -100,16 +68,13 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"/>
       </RelativeLayout>
-      <ListView
-          android:id="@+id/listView"
-          android:layout_below="@id/relativeLayout"
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/locRecyclerView"
           android:layout_width="match_parent"
-          android:layout_height="match_parent"
           android:scrollbars="none"
-          android:layout_marginLeft="13dp"
-          android:layout_marginRight="13dp"
-          android:divider="@null"
-          android:dividerHeight="8dp" />
+          android:layout_height="match_parent"/>
 
    </LinearLayout>
 

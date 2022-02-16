@@ -1,57 +1,87 @@
 package com.life.unicore.activities;
 
-import androidx.appcompat.app.ActionBar;
+import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Context;
 
 import android.content.Intent;
+import android.graphics.fonts.FontFamily;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.life.unicore.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class ManualSelectLocationActivity extends AppCompatActivity {
 
-    ArrayList<String> list=new ArrayList<String>();
-    private LocationListAdapter listAdapter;
+    Toolbar toolbar;
+    List<String> names=new ArrayList<>();
+    Context context;
+    RecyclerView loactionRecyclerView;
+    LinearLayoutManager linearLayoutManager;
+    private RecyclerAdapter recyclerAdapter;
+    RelativeLayout currenntLoclay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_select_location);
-        list.add("Banglore");
-        list.add("Chennai");
-        list.add("Delhi");
-        list.add("Hydrabad");
-        list.add("Mumbai");
-        list.add("Pune");
-        getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
-        listAdapter = new LocationListAdapter();
-        ListView listView = (ListView) findViewById(R.id.listView);
-        listView.setAdapter(listAdapter);
+        context=ManualSelectLocationActivity.this;
+        getWindow().setStatusBarColor(getResources().getColor(R.color.walktitle));
+        toolbar= findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_back_white);
+        toolbar.setTitle("Select your city");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        setSupportActionBar(toolbar);
 
-        //Toolbar toolbarTop = (Toolbar) findViewById(R.id.toolbar);
 
-        //TextView mTitle = (TextView) toolbarTop.findViewById(R.id.toolbar_title);
-        //getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        //getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+        currenntLoclay=(RelativeLayout)findViewById(R.id.currentLocLayout);
+        currenntLoclay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(ManualSelectLocationActivity.this,LoginScreen.class);
+                startActivity(i);
+            }
+        });
+        loactionRecyclerView=(RecyclerView)findViewById(R.id.locRecyclerView);
+        linearLayoutManager=new LinearLayoutManager(this);
+        loactionRecyclerView.setLayoutManager(linearLayoutManager);
+        loactionRecyclerView.setHasFixedSize(true);
+
+
+        names= Arrays.asList(getResources().getStringArray(R.array.locationlist));
+        recyclerAdapter=new RecyclerAdapter(names);
+        loactionRecyclerView.setAdapter(recyclerAdapter);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        /*getMenuInflater().inflate(R.menu.main_menu,menu);
-        MenuItem item=menu.findItem(R.id.action_search);
-        SearchView searchView=(SearchView)item.getActionView();
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        MenuItem searchItem=menu.findItem(R.id.searchh);
+        SearchView searchView=(SearchView)searchItem.getActionView();
+        searchView.setQueryHint("Search any city or locality");
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -60,56 +90,76 @@ public class ManualSelectLocationActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                return false;
+                String userInput=newText.toLowerCase();
+                List<String> newList=new ArrayList<>();
+                for(String name:names)
+                {
+                    if(name.toLowerCase().contains(userInput))
+                    {
+                        newList.add(name);
+                    }
+                }
+                recyclerAdapter.updateList(newList);
+
+                return true;
             }
-        });*/
-        return super.onCreateOptionsMenu(menu);
+        });
+        return true;
     }
+
     public void onBack(View view) {
         onBackPressed();
     }
-    private class LocationListAdapter extends BaseAdapter implements View.OnClickListener {
 
-        ImageView imageView;
+    public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>
+    {
+        private List<String> names;
 
-        TextView textView;
-        int i;
-
-        @Override
-        public int getCount() {
-            return list.size();
+        public RecyclerAdapter(List<String> names)
+        {
+            this.names=names;
         }
 
+        @NonNull
         @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            //json=jsonList.get(position);
-            if (convertView == null)
-                convertView = getLayoutInflater().inflate(R.layout.select_location_list_item_layout, parent, false);
-            ((TextView)convertView.findViewById(R.id.cityName)).setText(list.get(position));
-            convertView.setOnClickListener(new View.OnClickListener() {
+        public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            TextView  textView = (TextView)LayoutInflater.from(parent.getContext()).inflate(R.layout.textview_layout, parent, false);
+            textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i=new Intent(ManualSelectLocationActivity.this,LoginScreen.class);
                     startActivity(i);
                 }
             });
-
-            return convertView;
+            return new MyViewHolder(textView);
         }
 
         @Override
-        public void onClick(View v) {
+        public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
+            holder.Name.setText(names.get(position));
         }
+
+        @Override
+        public int getItemCount() {
+            return names.size();
+        }
+
+        public  class MyViewHolder extends RecyclerView.ViewHolder
+        {
+            TextView Name;
+            public MyViewHolder(TextView itemView) {
+                super(itemView);
+                Name=itemView;
+            }
+        }
+        public  void updateList(List<String> newList)
+        {
+            names=new ArrayList<>();
+            names.addAll(newList);
+            notifyDataSetChanged();
+        }
+
     }
+
 }

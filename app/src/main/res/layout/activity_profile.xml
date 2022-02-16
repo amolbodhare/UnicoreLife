@@ -149,16 +149,17 @@
                             android:layout_marginLeft="12dp"
                             android:layout_height="wrap_content">
 
-                            <Button
+
+                            <TextView
                                 android:id="@+id/docTypeBtn"
-                                android:layout_width="65dp"
-                                android:layout_height="10dp"
-                                android:layout_gravity="center_vertical"
-                                android:background="@drawable/textbackgrey"
-                                android:clickable="true"
+                                android:layout_width="60dp"
+                                android:layout_height="14dp"
                                 android:fontFamily="@font/lato_regular"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:background="@drawable/textview_oval_back"
                                 android:text="Allopath"
-                                android:textColor="@color/navigationTitlecolor"
+                                android:textColor="@color/icongrey"
                                 android:textSize="7dp" />
 
                             <TextView
@@ -337,11 +338,14 @@
                         android:scaleType="fitXY" />
                     <TextView
                         android:text="Get Directions"
+                        android:clickable="true"
+                        android:background="@drawable/clickable_trans_bg"
+                        android:focusable="true"
                         android:fontFamily="@font/lato_bold"
                         android:layout_marginLeft="40dp"
                         android:textSize="11sp"
                         android:textColor="@color/walktitle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:text="Timing"
@@ -363,13 +367,16 @@
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/viewAllTimings"
-                        android:text="All Timings"
+                        android:text="All TIMINGS"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/clickable_trans_bg"
                         android:fontFamily="@font/lato_bold"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="10dp"
-                        android:textSize="9sp"
+                        android:textSize="11sp"
                         android:textColor="@color/walktitle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:text="Services"
@@ -390,13 +397,16 @@
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:id="@+id/viewAllServices"
-                        android:text="View All Services"
+                        android:text="VIEW All SERVICES"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/clickable_trans_bg"
                         android:fontFamily="@font/lato_bold"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="10dp"
-                        android:textSize="9sp"
+                        android:textSize="11sp"
                         android:textColor="@color/walktitle"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:text="Specialization"
@@ -436,10 +446,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <TextView
-                        android:text="Show all experiences (78)"
+                        android:text="SHOW All EXPERIENCES (78)"
                         android:layout_alignParentLeft="true"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/lato_bold"
+                        android:clickable="true"
+                        android:background="@drawable/clickable_trans_bg"
+                        android:focusable="true"
                         android:layout_marginLeft="40dp"
                         android:textSize="11sp"
                         android:textColor="@color/walktitle"
@@ -457,9 +470,10 @@
                             android:layout_height="35dp"
                             android:layout_margin="10dp"
                             android:layout_weight="50"
-                            android:background="@drawable/whitebtnblueborder"
+                            android:background="@drawable/btnbackwhite"
                             android:fontFamily="@font/lato_regular"
                             android:text="SHARE EXPERIENCES"
+                            android:clickable="true"
                             android:textColor="@color/walktitle"
                             android:textSize="11sp" />
 

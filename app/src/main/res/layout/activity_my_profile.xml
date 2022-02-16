@@ -2,36 +2,113 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.MyProfileActivity">
-
-    <com.google.android.material.appbar.CollapsingToolbarLayout
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/topLayout"
         android:layout_width="match_parent"
-        android:id="@+id/collapsable"
-        android:layout_height="150dp">
+        android:background="@drawable/cover"
+        android:layout_height="230dp">
         <ImageView
             android:layout_width="match_parent"
-            android:src="@drawable/sample_img"
+            android:background="#E601558A"
             android:scaleType="fitXY"
             android:layout_height="match_parent"/>
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/drawerMenu"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:onClick="onBack"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/clickable_trans_bg"
+            android:clickable="true"
+            android:padding="19dp"
+            android:src="@drawable/ic_backnavarrow"
+            android:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/drawerMenu"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/lato_regular"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:text="My Profile"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/lato_regular"
+            android:singleLine="true"
+            android:text="Edit Profile"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/hello"
+        android:text="Hello"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/relativeLayout"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="17sp"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"/>
+    <TextView
+        android:id="@+id/name"
+        android:text="John Doe"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/hello"
+        android:textColor="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        android:layout_below="@id/collapsable"
+        android:layout_below="@id/name"
+        android:layout_marginTop="20dp"
         app:tabMode="fixed"
-        android:background="@color/walktitle"
+        android:background="@null"
+        app:tabUnboundedRipple="true"
         app:tabSelectedTextColor="@color/white"
         app:tabTextColor="@color/inactivetext"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="50dp"/>
+    </RelativeLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
-        android:layout_below="@id/tabs"
+        android:layout_below="@id/topLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 
 </RelativeLayout>

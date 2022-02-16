@@ -1,26 +1,30 @@
 package com.life.unicore.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.core.view.GravityCompat;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.appcompat.app.AppCompatActivity;
+        import androidx.cardview.widget.CardView;
+        import androidx.core.view.GravityCompat;
+        import androidx.recyclerview.widget.DefaultItemAnimator;
+        import androidx.recyclerview.widget.LinearLayoutManager;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ActionBar;
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.SearchView;
-import android.widget.TextView;
+        import android.app.ActionBar;
+        import android.content.Context;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.os.Handler;
+        import android.util.Log;
+        import android.view.Gravity;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import android.widget.LinearLayout;
+        import android.widget.SearchView;
+        import android.widget.TextView;
 
-import com.life.unicore.R;
+        import com.facebook.shimmer.ShimmerFrameLayout;
+        import com.life.unicore.R;
+
+        import java.util.ArrayList;
 
 public class DoctorsListActivity extends AppCompatActivity {
 
@@ -28,7 +32,8 @@ public class DoctorsListActivity extends AppCompatActivity {
     private static RecyclerView recyclerView;
     private Context context;
     DoctorsListAdapter doctorsListAdapter;
-     SearchView searchview;
+    SearchView searchview;
+    ArrayList<String> arrayList=new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,32 +44,50 @@ public class DoctorsListActivity extends AppCompatActivity {
         context=DoctorsListActivity.this;
         recyclerView = findViewById(R.id.doctorsListRecyclerView);
         searchview=findViewById(R.id.searchView);
-
+        doctorsListAdapter=new DoctorsListAdapter(context,arrayList);
         layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        doctorsListAdapter=new DoctorsListAdapter(context);
+        recyclerView.hasFixedSize();
         recyclerView.setAdapter(doctorsListAdapter);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doctorsListAdapter.showShiimer=false;
+                loadDummyData();
+                recyclerView.hasFixedSize();
+                doctorsListAdapter.notifyDataSetChanged();
+            }
+        },5000);
 
     }
 
     public class DoctorsListAdapter extends RecyclerView.Adapter<DoctorsListAdapter.MyViewHolder> {
         private Context context;
 
+        ArrayList<String> list=new ArrayList<String>();
+        boolean showShiimer=true;
+        int NUMBER_SHIMMERS=3;
+
         public class MyViewHolder extends RecyclerView.ViewHolder {
 
             CardView cardView;
             TextView textViewEventName;
             TextView textViewCompUsrNameTv;
-            TextView textViewCompNameTv;
-            TextView textViewLocation;
+            TextView textViewDoctNameTv;
+            TextView textViewClinicAreaTv;
             TextView textViewDate;
             TextView textViewSerial;
+            ShimmerFrameLayout shimmerFrameLayout;
 
 
             public MyViewHolder(View itemView) {
                 super(itemView);
 
+                this.shimmerFrameLayout = (ShimmerFrameLayout) itemView.findViewById(R.id.shimmmerLayout);
+                this.textViewDoctNameTv = (TextView) itemView.findViewById(R.id.docNameTv);
+                this.textViewClinicAreaTv = (TextView) itemView.findViewById(R.id.clinicAreaTv);
                 /*this.cardView = (CardView) itemView.findViewById(R.id.card_view);
                 this.textViewEventName = (TextView) itemView.findViewById(R.id.eventNameTv);
                 this.textViewCompUsrNameTv = (TextView) itemView.findViewById(R.id.companyUserNameTv);
@@ -75,8 +98,10 @@ public class DoctorsListActivity extends AppCompatActivity {
             }
         }
 
-        public DoctorsListAdapter(Context context) {
+        public DoctorsListAdapter(Context context,ArrayList<String> list)
+        {
             this.context = context;
+            this.list=list;
         }
 
         @Override
@@ -100,6 +125,22 @@ public class DoctorsListActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
+            if(showShiimer)
+            {
+                holder.shimmerFrameLayout.startShimmer();
+                //holder.textViewCompNameTv.setBackground(null);
+
+            }
+            else
+            {
+                holder.shimmerFrameLayout.stopShimmer();
+                holder.shimmerFrameLayout.setShimmer(null);
+
+                //holder.textViewDoctNameTv.setBackground(null);
+                holder.textViewClinicAreaTv.setBackground(null);
+                holder.textViewClinicAreaTv.setText(arrayList.get(listPosition));
+
+            }
 
      /*       CardView cardViewForClick = holder.cardView;
             TextView textViewEventName = holder.textViewEventName;
@@ -143,12 +184,28 @@ public class DoctorsListActivity extends AppCompatActivity {
 
         @Override
         public int getItemCount() {
-            return 10;
+            return showShiimer?NUMBER_SHIMMERS:10;
         }
         // Filter Method
 
     }
     public void onBack(View view) {
         onBackPressed();
+    }
+
+    private  void loadDummyData()
+    {
+        arrayList.add("Dr.Amit Trivedi");
+        arrayList.add("Dr.Zakir Husen");
+        arrayList.add("Dr.Geetaanjali Shetty");
+        arrayList.add("Dr.Amit Trivedi");
+        arrayList.add("Dr.Zakir Husen");
+        arrayList.add("Dr.Geetaanjali Shetty");
+        arrayList.add("Dr.Amit Trivedi");
+        arrayList.add("Dr.Zakir Husen");
+        arrayList.add("Dr.Geetaanjali Shetty");
+        arrayList.add("Dr.Amit Trivedi");
+        arrayList.add("Dr.Zakir Husen");
+        arrayList.add("Dr.Geetaanjali Shetty");
     }
 }

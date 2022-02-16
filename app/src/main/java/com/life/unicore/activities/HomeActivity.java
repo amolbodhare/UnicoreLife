@@ -1,5 +1,6 @@
 package com.life.unicore.activities;
 
+        import androidx.annotation.NonNull;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.core.view.GravityCompat;
         import androidx.drawerlayout.widget.DrawerLayout;
@@ -16,6 +17,7 @@ package com.life.unicore.activities;
         import android.view.ViewGroup;
         import android.widget.BaseAdapter;
         import android.widget.ImageView;
+        import android.widget.ScrollView;
         import android.widget.TextView;
 
 
@@ -30,6 +32,8 @@ public class HomeActivity extends AppCompatActivity {
     Context context;
     ArrayList<String> specialistnames=new ArrayList<String>();
     ArrayList<String> hospitalnames=new ArrayList<String>();
+    DrawerLayout.LayoutParams layoutParams;
+    ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,9 @@ public class HomeActivity extends AppCompatActivity {
         getWindow().setStatusBarColor(getResources().getColor(R.color.statusbarcolor));
         context=HomeActivity.this;
         drawerLayout = findViewById(R.id.drawerlayout);
+        scrollView=(ScrollView)findViewById(R.id.topScrollView);
+        layoutParams = (DrawerLayout.LayoutParams) scrollView.getLayoutParams();
+        setUpDrawer();
         ((ExpandableHeightGridView) findViewById(R.id.homeNavGridView)).setAdapter(new HomeNavGridViewAdapter());
         ((ExpandableHeightGridView) findViewById(R.id.homeNavGridView)).setExpanded(true);
         specialistSliderList();
@@ -61,6 +68,7 @@ public class HomeActivity extends AppCompatActivity {
     public void viewProfileEditClick(View view) {
         Intent i=new Intent(HomeActivity.this,MyProfileActivity.class);
         startActivity(i);
+        onDrawerCloseClick(findViewById(R.id.onDrawerClose));
     }
 
 
@@ -199,6 +207,35 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         HospitalsAdapter adapter = new HospitalsAdapter(context,hospitalnames);
         recyclerView.setAdapter(adapter);
+    }
+    private void setUpDrawer() {
+        drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(@NonNull View view, float v) {
+                scrollView.setTranslationX((((float) view.getWidth() * v)));
+                /*layoutParams.bottomMargin = (int) (view.getHeight()*v);
+                H.log("bottomMarginIs",view.getHeight()*v+"");
+                layoutParams.topMargin = (int) (view.getHeight()*v);
+                H.log("topMarginIs",view.getHeight()*v+"");*/
+
+                scrollView.setLayoutParams(layoutParams);
+                /*if (v<0.10)
+                    relativeLayout.setTranslationY((((float) view.getHeight() * v)));*/
+                //H.log("vIs",v+"");
+            }
+
+            @Override
+            public void onDrawerOpened(@NonNull View view) {
+            }
+
+            @Override
+            public void onDrawerClosed(@NonNull View view) {
+            }
+
+            @Override
+            public void onDrawerStateChanged(int i) {
+            }
+        });
     }
 
     public class SpecialistAdapter extends RecyclerView.Adapter<SpecialistAdapter.ViewHolder> {
